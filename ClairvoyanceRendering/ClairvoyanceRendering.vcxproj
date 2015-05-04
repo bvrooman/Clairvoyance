@@ -102,7 +102,7 @@
       <AdditionalLibraryDirectories>$(ProjectDir)Assimp\$(Platform)\$(Configuration);</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>call $(ProjectDir)\script.bat $(SolutionDir) $(ProjectDir) $(Configuration) $(Platform)</Command>
+      <Command>call $(ProjectDir)script.bat $(SolutionDir) $(ProjectDir) $(Configuration) $(Platform)</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -148,7 +148,7 @@
       <AdditionalLibraryDirectories>$(ProjectDir)Assimp\$(Platform)\$(Configuration);</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>call $(ProjectDir)\script.bat $(SolutionDir) $(ProjectDir) $(Configuration) $(Platform)</Command>
+      <Command>call $(ProjectDir)script.bat $(SolutionDir) $(ProjectDir) $(Configuration) $(Platform)</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
