@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E5240570-5738-42BC-B402-58C66EFD4719}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ClairvoyanceRendering</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>CLAIRE_RENDERING_NONCLIENT_BUILD;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLAIRVOYANCERENDERING_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Source;$(SolutionDir)ClairvoyanceCore\Source;$(SolutionDir)ClairvoyanceMath\Source;$(ASSIMP_INCLUDE_DIR)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>assimpd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)Assimp\$(Platform)\$(Configuration);</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>call $(ProjectDir)\script.bat $(SolutionDir) $(ProjectDir) $(Configuration) $(Platform)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>CLAIRE_RENDERING_NONCLIENT_BUILD;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLAIRVOYANCERENDERING_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Source;$(SolutionDir)ClairvoyanceCore\Source;$(SolutionDir)ClairvoyanceMath\Source;$(ASSIMP_INCLUDE_DIR)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>assimpd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)Assimp\$(Platform)\$(Configuration);</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>call $(ProjectDir)\script.bat $(SolutionDir) $(ProjectDir) $(Configuration) $(Platform)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>CLAIRE_RENDERING_NONCLIENT_BUILD;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLAIRVOYANCERENDERING_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Source;$(SolutionDir)ClairvoyanceCore\Source;$(SolutionDir)ClairvoyanceMath\Source;$(ASSIMP_INCLUDE_DIR)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)Assimp\$(Platform)\$(Configuration);</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>call $(ProjectDir)\script.bat $(SolutionDir) $(ProjectDir) $(Configuration) $(Platform)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>CLAIRE_RENDERING_NONCLIENT_BUILD;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLAIRVOYANCERENDERING_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Source;$(SolutionDir)ClairvoyanceCore\Source;$(SolutionDir)ClairvoyanceMath\Source;$(ASSIMP_INCLUDE_DIR)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)Assimp\$(Platform)\$(Configuration);</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>call $(ProjectDir)\script.bat $(SolutionDir) $(ProjectDir) $(Configuration) $(Platform)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Buffers\ClaireBufferObject.h" />
+    <ClInclude Include="Source\Buffers\ClaireBufferObjectManager.h" />
+    <ClInclude Include="Source\Buffers\ClaireIndexBufferObject.h" />
+    <ClInclude Include="Source\Buffers\ClaireVertexAttribute.h" />
+    <ClInclude Include="Source\Buffers\ClaireVertexFormat.h" />
+    <ClInclude Include="Source\Buffers\ClaireVertexBufferObject.h" />
+    <ClInclude Include="Source\Buffers\ClaireVertexBufferFormat.h" />
+    <ClInclude Include="Source\ClaireAxisAlignedBoundingBox.h" />
+    <ClInclude Include="Source\ClaireCamera.h" />
+    <ClInclude Include="Source\ClaireColour.h" />
+    <ClInclude Include="Source\ClaireDeviceContext.h" />
+    <ClInclude Include="Source\ClaireDummyNode.h" />
+    <ClInclude Include="Source\ClaireEntity.h" />
+    <ClInclude Include="Source\ClaireEntityFactory.h" />
+    <ClInclude Include="Source\ClaireFlatNode.h" />
+    <ClInclude Include="Source\ClaireINodeChainComponent.h" />
+    <ClInclude Include="Source\ClaireNameGenerator.h" />
+    <ClInclude Include="Source\ClaireNode.h" />
+    <ClInclude Include="Source\ClaireContiguousAllocator.h" />
+    <ClInclude Include="Source\ClaireNodeChain.h" />
+    <ClInclude Include="Source\ClaireNodeChainTransformComponent.h" />
+    <ClInclude Include="Source\ClaireNodeChainDummyComponent.h" />
+    <ClInclude Include="Source\ClairePixelFormat.h" />
+    <ClInclude Include="Source\ClaireRenderCommand.h" />
+    <ClInclude Include="Source\ClaireRenderCommandBucket.h" />
+    <ClInclude Include="Source\ClaireRenderObjectDescriptor.h" />
+    <ClInclude Include="Source\ClaireRenderTargetManager.h" />
+    <ClInclude Include="Source\ClaireRenderWindowManager.h" />
+    <ClInclude Include="Source\ClaireSceneNodeChainAABBComponent.h" />
+    <ClInclude Include="Source\ClaireSceneObjectFactory.h" />
+    <ClInclude Include="Source\ClairePlugin.h" />
+    <ClInclude Include="Source\ClaireRenderingPrerequisites.h" />
+    <ClInclude Include="Source\ClaireRenderRoot.h" />
+    <ClInclude Include="Source\ClaireRenderSystem.h" />
+    <ClInclude Include="Source\ClaireWindowRendererSupport.h" />
+    <ClInclude Include="Source\ClaireRenderTarget.h" />
+    <ClInclude Include="Source\ClaireRenderWindow.h" />
+    <ClInclude Include="Source\ClaireRenderWindowEvent.h" />
+    <ClInclude Include="Source\ClaireIRenderWindowEventListener.h" />
+    <ClInclude Include="Source\ClaireScene.h" />
+    <ClInclude Include="Source\ClaireSceneManager.h" />
+    <ClInclude Include="Source\ClaireSceneNode.h" />
+    <ClInclude Include="Source\ClaireSceneObject.h" />
+    <ClInclude Include="Source\ClaireTransform.h" />
+    <ClInclude Include="Source\ClaireViewFrustum.h" />
+    <ClInclude Include="Source\ClaireViewport.h" />
+    <ClInclude Include="Source\ClaireWindowEvents.h" />
+    <ClInclude Include="Source\ClaireWindowPlatformComponent.h" />
+    <ClInclude Include="Source\ClaireWindowPlatformSupport.h" />
+    <ClInclude Include="Source\ClaireWindowRendererComponent.h" />
+    <ClInclude Include="Source\Mesh\ClaireIMeshSerializerAdapter.h" />
+    <ClInclude Include="Source\Mesh\ClaireIndexData.h" />
+    <ClInclude Include="Source\Mesh\ClaireMesh.h" />
+    <ClInclude Include="Source\Mesh\ClaireMeshManager.h" />
+    <ClInclude Include="Source\Mesh\ClaireMeshSerializer.h" />
+    <ClInclude Include="Source\Mesh\ClaireMeshSerializerAssimp.h" />
+    <ClInclude Include="Source\Mesh\ClaireSubMesh.h" />
+    <ClInclude Include="Source\Mesh\ClaireVertexData.h" />
+    <ClInclude Include="Source\Mesh\ClaireVertexDataFormat.h" />
+    <ClInclude Include="Source\Platform\ClairePlatform.h" />
+    <ClInclude Include="Source\Win32\ClaireWindowPlatformSupportWin32.h" />
+    <ClInclude Include="Source\Win32\ClaireWindowPlatformComponentWin32.h" />
+    <ClInclude Include="Source\Win32\ClaireDeviceContextWin32.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClairvoyanceCore\ClairvoyanceCore.vcxproj">
+      <Project>{c22f24b4-e2cf-4031-8ac2-8feac5a863eb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ClairvoyanceMath\ClairvoyanceMath.vcxproj">
+      <Project>{b2648fbc-dab4-45f2-9159-4090a6004699}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Buffers\ClaireBufferObject.cpp" />
+    <ClCompile Include="Source\Buffers\ClaireBufferObjectManager.cpp" />
+    <ClCompile Include="Source\Buffers\ClaireIndexBufferObject.cpp" />
+    <ClCompile Include="Source\Buffers\ClaireVertexAttribute.cpp" />
+    <ClCompile Include="Source\Buffers\ClaireVertexBufferFormat.cpp" />
+    <ClCompile Include="Source\Buffers\ClaireVertexFormat.cpp" />
+    <ClCompile Include="Source\Buffers\ClaireVertexBufferObject.cpp" />
+    <ClCompile Include="Source\ClaireCamera.cpp" />
+    <ClCompile Include="Source\ClaireColour.cpp" />
+    <ClCompile Include="Source\ClaireDummyNode.cpp" />
+    <ClCompile Include="Source\ClaireEntity.cpp" />
+    <ClCompile Include="Source\ClaireEntityFactory.cpp" />
+    <ClCompile Include="Source\ClaireNode.cpp" />
+    <ClCompile Include="Source\ClaireNodeChain.cpp" />
+    <ClCompile Include="Source\ClaireNodeChainTransformComponent.cpp" />
+    <ClCompile Include="Source\ClairePixelFormat.cpp" />
+    <ClCompile Include="Source\ClairePlugin.cpp" />
+    <ClCompile Include="Source\ClaireRenderTargetManager.cpp" />
+    <ClCompile Include="Source\ClaireRenderWindowManager.cpp" />
+    <ClCompile Include="Source\ClaireSceneNodeChainAABBComponent.cpp" />
+    <ClCompile Include="Source\ClaireSceneObjectFactory.cpp" />
+    <ClCompile Include="Source\ClaireWindowRendererSupport.cpp" />
+    <ClCompile Include="Source\ClaireRenderRoot.cpp" />
+    <ClCompile Include="Source\ClaireRenderSystem.cpp" />
+    <ClCompile Include="Source\ClaireRenderTarget.cpp" />
+    <ClCompile Include="Source\ClaireRenderWindow.cpp" />
+    <ClCompile Include="Source\ClaireScene.cpp" />
+    <ClCompile Include="Source\ClaireSceneManager.cpp" />
+    <ClCompile Include="Source\ClaireSceneNode.cpp" />
+    <ClCompile Include="Source\ClaireSceneObject.cpp" />
+    <ClCompile Include="Source\ClaireTransform.cpp" />
+    <ClCompile Include="Source\ClaireViewport.cpp" />
+    <ClCompile Include="Source\ClaireWindowEvents.cpp" />
+    <ClCompile Include="Source\ClaireWindowPlatformComponent.cpp" />
+    <ClCompile Include="Source\ClaireWindowRendererComponent.cpp" />
+    <ClCompile Include="Source\ClaireViewFrustum.cpp" />
+    <ClCompile Include="Source\Mesh\ClaireMesh.cpp" />
+    <ClCompile Include="Source\Mesh\ClaireMeshManager.cpp" />
+    <ClCompile Include="Source\Mesh\ClaireMeshSerializer.cpp" />
+    <ClCompile Include="Source\Mesh\ClaireMeshSerializerAssimp.cpp" />
+    <ClCompile Include="Source\Mesh\ClaireSubMesh.cpp" />
+    <ClCompile Include="Source\Mesh\ClaireVertexData.cpp" />
+    <ClCompile Include="Source\Mesh\ClaireVertexDataFormat.cpp" />
+    <ClCompile Include="Source\Win32\ClaireDeviceContextWin32.cpp" />
+    <ClCompile Include="Source\Win32\ClaireWindowPlatformSupportWin32.cpp" />
+    <ClCompile Include="Source\Win32\ClaireWindowPlatformComponentWin32.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\ClaireRenderCommandBucket.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

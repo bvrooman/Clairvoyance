@@ -1,0 +1,4 @@
+#ifndef CLAIRE_DATA_STREAM_H
+#define CLAIRE_DATA_STREAM_H
+
+#endif

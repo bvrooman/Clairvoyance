@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Casts\ClaireUnionCast.h" />
+    <ClInclude Include="Source\ClaireBuildSettings.h" />
+    <ClInclude Include="Source\ClaireConfiguration.h" />
+    <ClInclude Include="Source\ClairePrerequisites.h" />
+    <ClInclude Include="Source\ClaireSTDHeaders.h" />
+    <ClInclude Include="Source\ClaireSTLContainers.h" />
+    <ClInclude Include="Source\ClaireThreadingProviders.h" />
+    <ClInclude Include="Source\Compile Time\ClaireBoolToType.h" />
+    <ClInclude Include="Source\Compile Time\ClaireIntToType.h" />
+    <ClInclude Include="Source\Compiler\ClaireClassMacros.h" />
+    <ClInclude Include="Source\Compiler\ClaireCompiler.h" />
+    <ClInclude Include="Source\Compiler\ClaireMovableMacros.h" />
+    <ClInclude Include="Source\Compiler\ClaireNamespaceMacros.h" />
+    <ClInclude Include="Source\Compiler\ClaireNonCopyMacros.h" />
+    <ClInclude Include="Source\Compiler\MSVC\ClaireCompilerMacrosMSVC.h" />
+    <ClInclude Include="Source\Compiler\MSVC\ClaireCompilerMSVC.h" />
+    <ClInclude Include="Source\Containers\ClaireFreelist.h" />
+    <ClInclude Include="Source\Idiom\ClaireDummy.h" />
+    <ClInclude Include="Source\Idiom\ClaireManager.h" />
+    <ClInclude Include="Source\Idiom\ClairePimpl.h" />
+    <ClInclude Include="Source\Idiom\ClaireSingleton.h" />
+    <ClInclude Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicy.h" />
+    <ClInclude Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyFreelist.h" />
+    <ClInclude Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyLinear.h" />
+    <ClInclude Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyPool.h" />
+    <ClInclude Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyNewDelete.h" />
+    <ClInclude Include="Source\Memory\Bounds Checking Policies\ClaireMemoryBoundsCheckingPolicyNone.h" />
+    <ClInclude Include="Source\Memory\Bounds Checking Policies\ClaireMemoryBoundsCheckingPolicySimple.h" />
+    <ClInclude Include="Source\Memory\ClaireAlignment.h" />
+    <ClInclude Include="Source\Memory\ClaireAllocatedObject.h" />
+    <ClInclude Include="Source\Memory\ClaireMemoryAllocatorSTL.h" />
+    <ClInclude Include="Source\Memory\ClaireMemoryAllocatorType.h" />
+    <ClInclude Include="Source\Memory\ClaireMemoryArena.h" />
+    <ClInclude Include="Source\Memory\ClaireMemoryConfig.h" />
+    <ClInclude Include="Source\Memory\ClaireMemoryObjectTraits.h" />
+    <ClInclude Include="Source\Memory\ClaireHeapArea.h" />
+    <ClInclude Include="Source\Memory\Pools\ClaireMemoryPool.h" />
+    <ClInclude Include="Source\Memory\Pools\ClaireMemoryPoolManager.h" />
+    <ClInclude Include="Source\Memory\Pools\ClaireStandardMemoryPool.h" />
+    <ClInclude Include="Source\Memory\Thread Policies\ClaireMemoryThreadPolicyMulti.h" />
+    <ClInclude Include="Source\Memory\Thread Policies\ClaireMemoryThreadPolicySingle.h" />
+    <ClInclude Include="Source\Platform\ClairePlatform.h" />
+    <ClInclude Include="Source\Resource\ClaireDataStream.h" />
+    <ClInclude Include="Source\Resource\ClaireResource.h" />
+    <ClInclude Include="Source\Resource\ClaireResourceManager.h" />
+    <ClInclude Include="Source\Threading\Boost\ClaireThreadingIncludesBoost.h" />
+    <ClInclude Include="Source\Threading\Boost\ClaireThreadingTypesBoost.h" />
+    <ClInclude Include="Source\Threading\ClaireMutex.h" />
+    <ClInclude Include="Source\Threading\ClaireRecursiveMutex.h" />
+    <ClInclude Include="Source\Threading\ClaireScopedLock.h" />
+    <ClInclude Include="Source\Threading\ClaireThread.h" />
+    <ClInclude Include="Source\Threading\ClaireThreadingIncludes.h" />
+    <ClInclude Include="Source\Threading\ClaireThreadingPlatform.h" />
+    <ClInclude Include="Source\Threading\ClaireThreadingTypes.h" />
+    <ClInclude Include="Source\Threading\ClaireThreadSpecificPtr.h" />
+    <ClInclude Include="Source\Threading\STD\ClaireThreadingIncludesSTD.h" />
+    <ClInclude Include="Source\Threading\STD\ClaireThreadingTypesSTD.h" />
+    <ClInclude Include="Source\Threading\ClaireThreadGroup.h" />
+    <ClInclude Include="Source\Threading\STD\ClaireThreadSpecificPtrSTD.h" />
+    <ClInclude Include="Source\Threading\Win32\ClaireThreadDetails.h" />
+    <ClInclude Include="Source\Threading\Win32\ClaireThreadPrimitives.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Containers\ClaireFreelist.cpp" />
+    <ClCompile Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyLinear.cpp" />
+    <ClCompile Include="Source\Memory\Bounds Checking Policies\ClaireMemoryBoundsCheckingPolicySimple.cpp" />
+    <ClCompile Include="Source\Memory\Pools\ClaireMemoryPoolManager.cpp" />
+    <ClCompile Include="Source\Memory\Pools\ClaireStandardMemoryPool.cpp" />
+    <ClCompile Include="Source\Resource\ClaireResource.cpp" />
+    <ClCompile Include="Source\Resource\ClaireResourceManager.cpp" />
+    <ClCompile Include="Source\Threading\ClaireMutex.cpp" />
+    <ClCompile Include="Source\Threading\ClaireRecursiveMutex.cpp" />
+    <ClCompile Include="Source\Threading\ClaireThread.cpp" />
+    <ClCompile Include="Source\Threading\ClaireThreadGroup.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Casts\ClaireUnionCast.inl" />
+    <None Include="Source\Idiom\ClairePimpl.inl" />
+    <None Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyFreelist.inl" />
+    <None Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyLinear.inl" />
+    <None Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyNewDelete.inl" />
+    <None Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyPool.inl" />
+    <None Include="Source\Memory\ClaireHeapArea.inl" />
+    <None Include="Source\Memory\ClaireMemoryArena.inl" />
+    <None Include="Source\Memory\Thread Policies\ClaireMemoryThreadPolicyMulti.inl" />
+    <None Include="Source\Threading\ClaireScopedLock.inl" />
+    <None Include="Source\Threading\ClaireThread.inl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C22F24B4-E2CF-4031-8AC2-8FEAC5A863EB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ClairvoyanceCore</RootNamespace>
+    <ProjectName>ClairvoyanceCore</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>CLAIRE_CORE_NONCLIENT_BUILD;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLAIRVOYANCE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)Source;$(BOOST_INCLUDEDIR)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(BOOST_LIBRARYDIR32)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>CLAIRE_CORE_NONCLIENT_BUILD;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLAIRVOYANCE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)Source;$(BOOST_INCLUDEDIR)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(BOOST_LIBRARYDIR64)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>CLAIRE_CORE_NONCLIENT_BUILD;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLAIRVOYANCE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)Source;$(BOOST_INCLUDEDIR)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(BOOST_LIBRARYDIR32)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>CLAIRE_CORE_NONCLIENT_BUILD;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLAIRVOYANCE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)Source;$(BOOST_INCLUDEDIR)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(BOOST_LIBRARYDIR64)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

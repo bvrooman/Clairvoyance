@@ -1,0 +1,16 @@
+#ifndef CLAIRE_NON_COPY_MACROS_H
+#define CLAIRE_NON_COPY_MACROS_H
+
+// CLAIRE_DELETE_COPY_CTOR deletes the copy constructor
+#define CLAIRE_DELETE_COPY_CTOR(CLASS) \
+	CLASS(const CLASS&) = delete; \
+
+// CLAIRE_DELETE_COPY_ASSIGN deletes the copy assignment
+#define CLAIRE_DELETE_COPY_ASSIGN(CLASS) \
+	CLASS& operator=(const CLASS&) = delete; \
+
+#define CLAIRE_NON_COPYABLE(CLASS) \
+	CLAIRE_DELETE_COPY_CTOR(CLASS) \
+	CLAIRE_DELETE_COPY_ASSIGN(CLASS)
+
+#endif

@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Memory">
+      <UniqueIdentifier>{e8f3bd0c-d231-4b96-8eca-908d44232e47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Memory\Allocation Policies">
+      <UniqueIdentifier>{f53126ed-058e-4f54-a4a3-9bebd7546ec6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Platform">
+      <UniqueIdentifier>{bf9ef3f6-81dd-4e40-ac26-2b1a28967f65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Memory\Pools">
+      <UniqueIdentifier>{e91a3de8-aa7a-4d5e-8f37-93d4a153abd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Containers">
+      <UniqueIdentifier>{0e5a464a-4158-4149-8668-ef754e3b7315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Memory\Bounds Checking Policies">
+      <UniqueIdentifier>{322fd354-15b7-45eb-90b0-3173151aefec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Compiler">
+      <UniqueIdentifier>{972a9913-e18a-44ed-91cc-1122bfaf8282}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Compiler\MSVC">
+      <UniqueIdentifier>{afc3a7a9-3c9c-4269-8379-bd55b932388a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Memory">
+      <UniqueIdentifier>{50cc0408-42ea-48a2-ae51-3cea0d863882}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Memory\Allocation Policies">
+      <UniqueIdentifier>{3b5074be-e83e-4c73-850d-ec0f0dd710c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Memory\Pools">
+      <UniqueIdentifier>{55a5252a-52b9-4457-8dc6-46fc9aa1b802}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Memory\Bounds Checking Policies">
+      <UniqueIdentifier>{9eb6fe05-7ab4-4363-982f-1b998cf78860}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Containers">
+      <UniqueIdentifier>{fb0febeb-39f8-4310-83d1-5b5f502132f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Compile Time">
+      <UniqueIdentifier>{57c775c8-8d9c-4b44-81e3-7823d91fcfa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Threading">
+      <UniqueIdentifier>{aedb9e78-ce95-4c00-bbc1-8340d7556022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Threading">
+      <UniqueIdentifier>{9746610b-1864-4410-ba83-71f2509b8424}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Threading\Boost">
+      <UniqueIdentifier>{f153f723-b4c0-4432-af01-56e44022f582}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Memory\Thread Policies">
+      <UniqueIdentifier>{3884dd58-bab4-4c02-8361-7c94b466ddeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Memory\ThreadPolicies">
+      <UniqueIdentifier>{b7341154-04d6-4d3f-9415-d27eb84d9079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Threading\Win32">
+      <UniqueIdentifier>{758bbe98-64f7-4e33-8927-e99db3a0c593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Threading\STD">
+      <UniqueIdentifier>{640fab5c-863c-4bc6-9179-d6f9ac6de4d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Idiom">
+      <UniqueIdentifier>{492368a2-b88d-4b9e-aee1-5bb65f59bd92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Idiom">
+      <UniqueIdentifier>{408535bf-1473-48e5-a6a1-4065c1fe0a22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resource">
+      <UniqueIdentifier>{6cce21b4-fa82-471e-b340-c89586ec6ae1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resource">
+      <UniqueIdentifier>{0a235277-111d-4941-acba-3ec1461a7ef7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Casts">
+      <UniqueIdentifier>{b9a4d601-40d2-4b76-a1de-e274ccc9ff47}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\ClaireBuildSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ClaireConfiguration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ClairePrerequisites.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ClaireSTDHeaders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\ClaireMemoryAllocatorSTL.h">
+      <Filter>Header Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\ClaireMemoryConfig.h">
+      <Filter>Header Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\ClaireMemoryObjectTraits.h">
+      <Filter>Header Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\ClaireAllocatedObject.h">
+      <Filter>Header Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicy.h">
+      <Filter>Header Files\Memory\Allocation Policies</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Platform\ClairePlatform.h">
+      <Filter>Header Files\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyNewDelete.h">
+      <Filter>Header Files\Memory\Allocation Policies</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\Pools\ClaireMemoryPool.h">
+      <Filter>Header Files\Memory\Pools</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Containers\ClaireFreelist.h">
+      <Filter>Header Files\Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyFreelist.h">
+      <Filter>Header Files\Memory\Allocation Policies</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\Bounds Checking Policies\ClaireMemoryBoundsCheckingPolicySimple.h">
+      <Filter>Header Files\Memory\Bounds Checking Policies</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Compiler\ClaireCompiler.h">
+      <Filter>Header Files\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Compiler\MSVC\ClaireCompilerMacrosMSVC.h">
+      <Filter>Header Files\Compiler\MSVC</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Compiler\MSVC\ClaireCompilerMSVC.h">
+      <Filter>Header Files\Compiler\MSVC</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\Pools\ClaireStandardMemoryPool.h">
+      <Filter>Header Files\Memory\Pools</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\Bounds Checking Policies\ClaireMemoryBoundsCheckingPolicyNone.h">
+      <Filter>Header Files\Memory\Bounds Checking Policies</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\ClaireHeapArea.h">
+      <Filter>Header Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\ClaireMemoryArena.h">
+      <Filter>Header Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\ClaireMemoryAllocatorType.h">
+      <Filter>Header Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Compile Time\ClaireIntToType.h">
+      <Filter>Header Files\Compile Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyPool.h">
+      <Filter>Header Files\Memory\Allocation Policies</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\ClaireMutex.h">
+      <Filter>Header Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\ClaireThread.h">
+      <Filter>Header Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\ClaireThreadingIncludes.h">
+      <Filter>Header Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\ClaireThreadingTypes.h">
+      <Filter>Header Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ClaireThreadingProviders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\Boost\ClaireThreadingIncludesBoost.h">
+      <Filter>Header Files\Threading\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\Boost\ClaireThreadingTypesBoost.h">
+      <Filter>Header Files\Threading\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Compile Time\ClaireBoolToType.h">
+      <Filter>Header Files\Compile Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\ClaireRecursiveMutex.h">
+      <Filter>Header Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\ClaireScopedLock.h">
+      <Filter>Header Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\Thread Policies\ClaireMemoryThreadPolicyMulti.h">
+      <Filter>Header Files\Memory\Thread Policies</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\Thread Policies\ClaireMemoryThreadPolicySingle.h">
+      <Filter>Header Files\Memory\Thread Policies</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\ClaireThreadSpecificPtr.h">
+      <Filter>Header Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\ClaireThreadingPlatform.h">
+      <Filter>Header Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\Win32\ClaireThreadPrimitives.h">
+      <Filter>Header Files\Threading\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\Win32\ClaireThreadDetails.h">
+      <Filter>Header Files\Threading\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\STD\ClaireThreadingIncludesSTD.h">
+      <Filter>Header Files\Threading\STD</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\STD\ClaireThreadingTypesSTD.h">
+      <Filter>Header Files\Threading\STD</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\ClaireThreadGroup.h">
+      <Filter>Header Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Idiom\ClairePimpl.h">
+      <Filter>Header Files\Idiom</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Idiom\ClaireDummy.h">
+      <Filter>Header Files\Idiom</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Idiom\ClaireSingleton.h">
+      <Filter>Header Files\Idiom</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\STD\ClaireThreadSpecificPtrSTD.h">
+      <Filter>Header Files\Threading\STD</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Compiler\ClaireClassMacros.h">
+      <Filter>Header Files\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Compiler\ClaireMovableMacros.h">
+      <Filter>Header Files\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Compiler\ClaireNamespaceMacros.h">
+      <Filter>Header Files\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Compiler\ClaireNonCopyMacros.h">
+      <Filter>Header Files\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ClaireSTLContainers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\ClaireAlignment.h">
+      <Filter>Header Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Resource\ClaireResource.h">
+      <Filter>Header Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Resource\ClaireResourceManager.h">
+      <Filter>Header Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Resource\ClaireDataStream.h">
+      <Filter>Header Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyLinear.h">
+      <Filter>Header Files\Memory\Allocation Policies</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Memory\Pools\ClaireMemoryPoolManager.h">
+      <Filter>Header Files\Memory\Pools</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Casts\ClaireUnionCast.h">
+      <Filter>Header Files\Casts</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Idiom\ClaireManager.h">
+      <Filter>Header Files\Idiom</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Memory\Pools\ClaireMemoryPoolManager.cpp">
+      <Filter>Source Files\Memory\Pools</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Memory\Pools\ClaireStandardMemoryPool.cpp">
+      <Filter>Source Files\Memory\Pools</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Memory\Bounds Checking Policies\ClaireMemoryBoundsCheckingPolicySimple.cpp">
+      <Filter>Source Files\Memory\Bounds Checking Policies</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Containers\ClaireFreelist.cpp">
+      <Filter>Source Files\Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Threading\ClaireMutex.cpp">
+      <Filter>Source Files\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Threading\ClaireThread.cpp">
+      <Filter>Source Files\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Threading\ClaireRecursiveMutex.cpp">
+      <Filter>Source Files\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Threading\ClaireThreadGroup.cpp">
+      <Filter>Source Files\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Resource\ClaireResource.cpp">
+      <Filter>Source Files\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Resource\ClaireResourceManager.cpp">
+      <Filter>Source Files\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyLinear.cpp">
+      <Filter>Source Files\Memory\Allocation Policies</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyPool.inl">
+      <Filter>Source Files\Memory\Allocation Policies</Filter>
+    </None>
+    <None Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyFreelist.inl">
+      <Filter>Source Files\Memory\Allocation Policies</Filter>
+    </None>
+    <None Include="Source\Memory\ClaireMemoryArena.inl">
+      <Filter>Source Files\Memory</Filter>
+    </None>
+    <None Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyNewDelete.inl">
+      <Filter>Source Files\Memory\Allocation Policies</Filter>
+    </None>
+    <None Include="Source\Threading\ClaireThread.inl">
+      <Filter>Source Files\Threading</Filter>
+    </None>
+    <None Include="Source\Threading\ClaireScopedLock.inl">
+      <Filter>Source Files\Threading</Filter>
+    </None>
+    <None Include="Source\Memory\Thread Policies\ClaireMemoryThreadPolicyMulti.inl">
+      <Filter>Source Files\Memory\ThreadPolicies</Filter>
+    </None>
+    <None Include="Source\Idiom\ClairePimpl.inl">
+      <Filter>Source Files\Idiom</Filter>
+    </None>
+    <None Include="Source\Memory\Allocation Policies\ClaireMemoryAllocationPolicyLinear.inl">
+      <Filter>Source Files\Memory\Allocation Policies</Filter>
+    </None>
+    <None Include="Source\Memory\ClaireHeapArea.inl">
+      <Filter>Source Files\Memory</Filter>
+    </None>
+    <None Include="Source\Casts\ClaireUnionCast.inl">
+      <Filter>Header Files\Casts</Filter>
+    </None>
+  </ItemGroup>
+</Project>
