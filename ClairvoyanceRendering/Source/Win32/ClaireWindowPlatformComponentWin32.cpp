@@ -26,7 +26,7 @@ namespace Claire
 
 	void WindowPlatformComponentWin32::create(void)
 	{
-		if (mHWnd)
+		if(mHWnd)
 			destroy();
 
 		const uint16_t moduleFlags =
@@ -128,7 +128,7 @@ namespace Claire
 			dmScreenSettings.dmBitsPerPel = (DWORD)mColourDepth;
 			dmScreenSettings.dmFields = DM_BITSPERPEL | DM_PELSWIDTH | DM_PELSHEIGHT;
 
-			if (ChangeDisplaySettings(&dmScreenSettings, CDS_FULLSCREEN) != DISP_CHANGE_SUCCESSFUL)
+			if(ChangeDisplaySettings(&dmScreenSettings, CDS_FULLSCREEN) != DISP_CHANGE_SUCCESSFUL)
 			{
 				// Critical Error
 			}

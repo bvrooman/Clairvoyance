@@ -48,12 +48,12 @@ namespace Claire
 	{
 		static core::ThreadSpecificPtr<WGLEWContext> sWGLEWContext;
 
-		if (sWGLEWContext.get() == nullptr)
+		if(sWGLEWContext.get() == nullptr)
 		{
 			WGLEWContext* context = new WGLEWContext();
 			sWGLEWContext.reset(context);
 			GLenum status = wglewInit();
-			if (status != GLEW_OK)
+			if(status != GLEW_OK)
 			{
 				printf("FUCK YOUR MOTHER\n");
 				// Critical error

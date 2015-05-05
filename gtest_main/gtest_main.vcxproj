@@ -103,7 +103,7 @@
       <SubSystem>Windows</SubSystem>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(GOOGLE_TEST_LIBRARYDIR)\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(GOOGLE_TEST_LIBRARY_DIR)\$(Configuration)</AdditionalLibraryDirectories>
       <AdditionalDependencies>gtest.lib</AdditionalDependencies>
     </Lib>
     <ProjectReference>

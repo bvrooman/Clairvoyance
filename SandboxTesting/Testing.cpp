@@ -33,34 +33,34 @@ int CALLBACK WinMain(
 	)
 {
 #endif
-	//PluginGLWin32* plugin = new PluginGLWin32();
+	PluginGLWin32 plugin;
 	
 
-	//RenderRoot* root = new RenderRoot();
-	//root->addPlugin(plugin);
-	//root->installAllPlugins();
+	RenderRootUPtr root = std::make_unique<RenderRoot>();
+	root->addPlugin(&plugin);
+	root->installAllPlugins();
 
-	//root->setRenderSystem("RenderSystemGL");
+	root->setRenderSystem("RenderSystemGL");
 
-	//root->initialize();
+	root->initialize();
 
-	/*RenderSystem* rs = root->getActiveRenderSystem();
+	RenderSystem* rs = root->getActiveRenderSystem();
 	RenderWindow* window;
-	string name = "HelloWorld";*/
+	string name = "HelloWorld";
 
-	//root->createRenderWindow(name, 800, 600, false);
-	//window = rs->getRenderWindow(name);
+	root->createRenderWindow(name, 800, 600, false);
+	window = rs->getRenderWindow(name);
 
-	//Scene* scene = root->getSceneManager()->createScene("defaultScene");
-	//Camera* camera = scene->createCamera("defaultCamera");
+	Scene* scene = root->getSceneManager()->createScene("defaultScene");
+	Camera* camera = scene->createCamera("defaultCamera");
 
-	//Viewport* vp = window->createViewport(camera, 0, Colour::Blue, 0, 0, 0.5, 1);
-	//Viewport* vp2 = window->createViewport(camera, 1, Colour::Green, 0.5, 0, 0.5, 1);
+	Viewport* vp = window->createViewport(camera, 0, Colour::Blue, 0, 0, 0.5, 1);
+	Viewport* vp2 = window->createViewport(camera, 1, Colour::Green, 0.5, 0, 0.5, 1);
 
 	//root->getMeshManager()->loadResource("Bench", "bench.obj");
-	//root->getMeshManager()->loadResource("Women", "Women.3ds");
-	/*root->getMeshManager()->loadResource("Box", "box.fbx");
-	Entity* e = scene->createEntity("HelloWorld", "Box");*/
+	root->getMeshManager()->loadResource("Women", "Women.3ds");
+	root->getMeshManager()->loadResource("Box", "box.fbx");
+	//Entity* e = scene->createEntity("HelloWorld", "Box");
 
 
 	/*RenderCommandBucket<uint32_t> buffer(10);
@@ -80,15 +80,11 @@ int CALLBACK WinMain(
 
 	buffer.submit();*/
 
-	//root->startRendering();
+	root->startRendering();
 
 	
 	
 #if _DEBUG
 	system("PAUSE");
 #endif
-
-	//delete plugin;
-
-	//delete root;
 }

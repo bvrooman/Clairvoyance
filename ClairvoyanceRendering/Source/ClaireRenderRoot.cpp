@@ -52,7 +52,7 @@ namespace Claire
 
 	void RenderRoot::installAllPlugins(void)
 	{
-		for(plugin:mPluginVector)
+		for(auto&& plugin : mPluginVector)
 		{
 			plugin->install(this);
 		}
@@ -166,12 +166,13 @@ namespace Claire
 
 	void RenderRoot::setMainRenderWindow(RenderWindow* window)
 	{
-		if(mMainRenderWindow)
-		{
-			mMainRenderWindow->removeRenderWindowEventListener(this);
-		}
 		if(window)
 		{
+			if(mMainRenderWindow)
+			{
+				mMainRenderWindow->removeRenderWindowEventListener(this);
+			}
+
 			mMainRenderWindow = window;
 			mMainRenderWindow->addRenderWindowEventListener(this);
 		}

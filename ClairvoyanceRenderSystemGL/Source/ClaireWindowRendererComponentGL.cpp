@@ -19,9 +19,9 @@ namespace Claire
 	void WindowRendererComponentGL::create(void)
 	{
 		createRenderContext();
-		mRenderContext->makeCurrent();
+		bool success = mRenderContext->makeCurrent();
+		assert(success);
 	}
-
 
 	CLAIRE_NAMESPACE_END
 }

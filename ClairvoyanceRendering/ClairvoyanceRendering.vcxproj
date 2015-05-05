@@ -93,7 +93,7 @@
       <PreprocessorDefinitions>CLAIRE_RENDERING_NONCLIENT_BUILD;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLAIRVOYANCERENDERING_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
-      <AdditionalIncludeDirectories>$(ProjectDir)Source;$(SolutionDir)ClairvoyanceCore\Source;$(SolutionDir)ClairvoyanceMath\Source;$(ASSIMP_INCLUDE_DIR)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Source;$(SolutionDir)ClairvoyanceCore\Source;$(SolutionDir)ClairvoyanceMath\Source;$(ASSIMP)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -137,7 +137,7 @@
       <PreprocessorDefinitions>CLAIRE_RENDERING_NONCLIENT_BUILD;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLAIRVOYANCERENDERING_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
-      <AdditionalIncludeDirectories>$(ProjectDir)Source;$(SolutionDir)ClairvoyanceCore\Source;$(SolutionDir)ClairvoyanceMath\Source;$(ASSIMP_INCLUDE_DIR)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Source;$(SolutionDir)ClairvoyanceCore\Source;$(SolutionDir)ClairvoyanceMath\Source;$(ASSIMP)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

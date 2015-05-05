@@ -13,6 +13,9 @@ namespace Claire
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 
 	WindowRendererSupportGLWin32::WindowRendererSupportGLWin32(void)
+		: mHasPixelFormatARB(false)
+		, mHasMultisample(false)
+		, mHasHardwareGamma(false)
 	{
 	}
 
@@ -24,6 +27,7 @@ namespace Claire
 	{
 		if(!initializeWGL())
 		{
+			assert(false && "Unale to initialize WGL");
 			return;
 		}
 	}
@@ -77,9 +81,9 @@ namespace Claire
 
 		bool success = true;
 
-		DeviceContextUPtr dc = std::make_unique<DeviceContextWin32>(hdc);
-		RenderContextGLUPtr dummyRenderContext = std::make_unique<RenderContextGLWin32>(dc.get());
-		success &= dummyRenderContext->makeCurrent();
+		DeviceContextWin32 dc(hdc);
+		RenderContextGLWin32 dummyRenderContext(&dc);
+		success &= dummyRenderContext.makeCurrent();
 
 		if(success)
 		{
@@ -110,7 +114,7 @@ namespace Claire
 			wglChoosePixelFormatARB = (PFNWGLCHOOSEPIXELFORMATARBPROC)wglGetProcAddress("wglChoosePixelFormatARB");
 			success &= (wglChoosePixelFormatARB != nullptr);
 
-			dummyRenderContext->release();
+			dummyRenderContext.release();
 		}
 
 		// Clean up
@@ -148,7 +152,7 @@ namespace Claire
 
 		int format = 0;
 
-		if (mHasMultisample)
+		if(mHasMultisample)
 		{
 			vector<int> attribList;
 			attribList.push_back(WGL_DRAW_TO_WINDOW_ARB);	attribList.push_back(GL_TRUE);
@@ -162,7 +166,7 @@ namespace Claire
 			attribList.push_back(WGL_STENCIL_BITS_ARB);		attribList.push_back(stencilBits);
 			attribList.push_back(WGL_SAMPLES_ARB);			attribList.push_back(samples);
 
-			if (mHasHardwareGamma)
+			if(mHasHardwareGamma)
 			{
 				attribList.push_back(WGL_FRAMEBUFFER_SRGB_CAPABLE_EXT);	attribList.push_back(GL_TRUE);
 			}

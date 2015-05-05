@@ -29,6 +29,7 @@ namespace Claire
 		}
 		else
 		{
+			std::cout << path << "\n";
 			assert(false && "Unable to find file.\n");
 		}
 	}
