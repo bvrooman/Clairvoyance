@@ -5,7 +5,6 @@
 
 #include "ClaireWindowRendererSupportGL.h"
 
-
 namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(rendering)
@@ -25,13 +24,20 @@ namespace Claire
 
 		void setPixelFormat(const DeviceContext* deviceContext, const PixelFormat& pixelFormat) const CLAIRE_OVERRIDE;
 
+		void startDummyContext(void);
+		void endDummyContext(void);
+
 	private:
 		bool initializeWGL(void);
 
 	private:
-		bool mHasPixelFormatARB;
-		bool mHasMultisample;
-		bool mHasHardwareGamma;
+		LPCWSTR mDummyText = L"dummy";
+		HWND mDummyHWND;
+		RenderContextGLUPtr mDummyRenderContext;
+
+		bool mHasPixelFormatARB = false;
+		bool mHasMultisample = false;
+		bool mHasHardwareGamma = false;
 	};
 
 	CLAIRE_NAMESPACE_END

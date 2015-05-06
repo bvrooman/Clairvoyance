@@ -38,8 +38,8 @@ namespace Claire
 		string mPath;
 		ResourceManager* mManager;
 
-		size_t mSize;
-		bool mLoaded;
+		size_t mSize = 0;
+		bool mLoaded = false;
 	};
 
 	typedef std::unique_ptr<Resource> ResourceUPtr;

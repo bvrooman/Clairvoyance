@@ -8,7 +8,6 @@ namespace Claire
 		IndexedVertexAttributeSemantic semantic,
 		VertexAttributeType type,
 		ushort count
-		//ushort index
 		)
 		: mSemantic(semantic)
 		, mType(type)

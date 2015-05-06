@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClaireRange.h" />
     <ClInclude Include="Source\Casts\ClaireUnionCast.h" />
     <ClInclude Include="Source\ClaireBuildSettings.h" />
     <ClInclude Include="Source\ClaireConfiguration.h" />

@@ -20,16 +20,17 @@ namespace Claire
 			break;
 
 		case IT_32BIT:
-		default:
 			mIndexSize = sizeof(uint32_t);
 			break;
+
+		default:
+			mIndexSize = 0;
 		}
 		mBytes = mIndexSize * mNumIndices;
 	}
 
 	IndexBufferObject::~IndexBufferObject(void)
 	{
-
 	}
 
 	CLAIRE_NAMESPACE_END

@@ -5,6 +5,7 @@
 #include "Compiler\ClaireNamespaceMacros.h"
 #include "Compiler\ClaireClassMacros.h"
 #include "Casts\ClaireUnionCast.h"
+#include "ClaireRange.h"
 
 #if CLAIRE_DOUBLE_PRECISION == 1
 	typedef double real;

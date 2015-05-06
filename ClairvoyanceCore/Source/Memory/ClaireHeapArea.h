@@ -17,8 +17,8 @@ namespace Claire
 		inline void* getEnd(void) const;
 
 	private:
-		void* mStart;
-		void* mEnd;
+		void* mStart = nullptr;
+		void* mEnd = nullptr;
 
 		typedef std::unique_ptr<byte[]> ByteArrayUPtr;
 		ByteArrayUPtr mByteArray;

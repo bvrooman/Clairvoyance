@@ -17,7 +17,8 @@ namespace Claire
 		{
 			IT_8BIT,
 			IT_16BIT,
-			IT_32BIT
+			IT_32BIT,
+			IT_UNKNOWN,
 		};
 
 	public:
@@ -25,9 +26,9 @@ namespace Claire
 		virtual ~IndexBufferObject(void);
 
 	protected:
-		IndexType mIndexType;
-		size_t mIndexSize;
-		size_t mNumIndices;
+		IndexType mIndexType = IT_UNKNOWN;
+		size_t mIndexSize = 0;
+		size_t mNumIndices = 0;
 	};
 
 	CLAIRE_NAMESPACE_END

@@ -158,10 +158,14 @@
     <ClCompile Include="AxisAlignedBoundingBoxTests.cpp" />
     <ClCompile Include="BufferObjectTests.cpp" />
     <ClCompile Include="GLTests.cpp" />
+    <ClCompile Include="MeshTests.cpp" />
     <ClCompile Include="NodeTests.cpp" />
     <ClCompile Include="SceneNodeTests.cpp" />
     <ClCompile Include="TransformTests.cpp" />
     <ClCompile Include="WindowTests.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DummyBufferObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

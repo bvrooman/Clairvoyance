@@ -36,9 +36,9 @@ namespace Claire
 		void deallocateImpl(void* ptr) CLAIRE_OVERRIDE;
 
 	private:
-		const void* mStart;
-		const void* mEnd;
-		void* mCurrent;
+		const void* mStart = nullptr;
+		const void* mEnd = nullptr;
+		void* mCurrent = nullptr;
 
 	public:
 		static const bool STL_ALLOCATOR_COMPATIBLE = true;

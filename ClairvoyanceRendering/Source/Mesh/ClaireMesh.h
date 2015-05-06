@@ -52,10 +52,10 @@ namespace Claire
 		void calculateSize(void) CLAIRE_OVERRIDE;
 
 	private:
-		MeshManager* mMeshManager;
+		MeshManager* mMeshManager = nullptr;
 
-		EnumFlags mVertexBufferUsageSettingsFlags;
-		EnumFlags mIndexBufferUsageSettingsFlags;
+		EnumFlags mVertexBufferUsageSettingsFlags = BufferObject::US_WRITE_ONLY;
+		EnumFlags mIndexBufferUsageSettingsFlags = BufferObject::US_WRITE_ONLY;
 
 		SubMeshList mSubMeshList;
 		SubMeshPtrList mSubMeshPtrList;

@@ -15,6 +15,7 @@ namespace Claire
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 
 	class BufferObjectManager;
+	class Mesh;
 
 	class CLAIRE_RENDERING_EXPORT MeshManager
 		: public ResourceManager
@@ -22,6 +23,8 @@ namespace Claire
 	public:
 		MeshManager(BufferObjectManager* bufferObjectManager);
 		~MeshManager(void);
+
+		Mesh* getMesh(const string& name) const;
 
 		BufferObjectManager* getBufferObjectManager(void) const { return mBufferObjectManager; }
 		IMeshSerializerAdapter* getMeshSerializerAdapter(void) const { return mSerializerAdapter.get(); }

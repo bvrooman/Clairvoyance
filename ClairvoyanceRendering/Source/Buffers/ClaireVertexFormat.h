@@ -47,7 +47,7 @@ namespace Claire
 
 	private:
 		VertexAttributeVector mVertexAttributeVector;
-		ushort mVertexSize;
+		ushort mVertexSize = 0;
 	};
 
 	CLAIRE_NAMESPACE_END

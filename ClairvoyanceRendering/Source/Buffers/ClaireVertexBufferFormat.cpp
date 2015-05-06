@@ -23,20 +23,14 @@ namespace Claire
 
 	const VertexAttribute* VertexBufferFormat::getVertexAttributeFromSemantic(IndexedVertexAttributeSemantic semantic) const
 	{
-		const VertexAttribute* ret = nullptr;
-		for (
-			VertexAttributeVector::const_iterator it = mVertexAttributeVector.begin();
-			it != mVertexAttributeVector.end();
-		it++
-			)
+		for(auto&& attribute : mVertexAttributeVector)
 		{
-			const VertexAttribute* attribute = &(*it);
-			if (attribute->getSemantic() == semantic)
+			if(attribute.getSemantic() == semantic)
 			{
-				ret = attribute;
+				return &attribute;
 			}
 		}
-		return ret;
+		return nullptr;
 	}
 
 	CLAIRE_NAMESPACE_END

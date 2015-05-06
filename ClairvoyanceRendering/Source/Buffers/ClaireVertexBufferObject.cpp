@@ -14,7 +14,6 @@ namespace Claire
 
 	VertexBufferObject::~VertexBufferObject(void)
 	{
-
 	}
 
 	CLAIRE_NAMESPACE_END

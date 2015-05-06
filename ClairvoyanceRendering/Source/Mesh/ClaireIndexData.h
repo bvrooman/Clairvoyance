@@ -19,7 +19,7 @@ namespace Claire
 		IndexBufferObject* getIndexBufferObject(void) const { return mIndexBufferObject; }
 
 	private:
-		IndexBufferObject* mIndexBufferObject;
+		IndexBufferObject* mIndexBufferObject = nullptr;
 	};
 
 	typedef std::unique_ptr<IndexData> IndexDataUPtr;

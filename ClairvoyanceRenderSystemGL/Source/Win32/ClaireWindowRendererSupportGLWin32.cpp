@@ -13,14 +13,17 @@ namespace Claire
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 
 	WindowRendererSupportGLWin32::WindowRendererSupportGLWin32(void)
-		: mHasPixelFormatARB(false)
-		, mHasMultisample(false)
-		, mHasHardwareGamma(false)
 	{
 	}
 
 	WindowRendererSupportGLWin32::~WindowRendererSupportGLWin32(void)
 	{
+		// Clean up
+		mDummyRenderContext->release();
+
+		DestroyWindow(mDummyHWND);
+		HINSTANCE hInstance = (HINSTANCE)GetWindowLong(mDummyHWND, GWL_HINSTANCE);
+		UnregisterClass(mDummyText, hInstance);
 	}
 
 	void WindowRendererSupportGLWin32::initialize(void)
@@ -32,10 +35,19 @@ namespace Claire
 		}
 	}
 
+	void WindowRendererSupportGLWin32::startDummyContext(void)
+	{
+		bool success = mDummyRenderContext->makeCurrent();
+		assert(success);
+	}
+
+	void WindowRendererSupportGLWin32::endDummyContext(void)
+	{
+		mDummyRenderContext->endCurrent();
+	}
+
 	bool WindowRendererSupportGLWin32::initializeWGL(void)
 	{
-		LPCWSTR dummyText = L"dummy";
-
 		const uint16_t moduleFlags =
 			GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS |
 			GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT;
@@ -48,12 +60,12 @@ namespace Claire
 		dummyClass.style = CS_OWNDC;
 		dummyClass.hInstance = hInstance;
 		dummyClass.lpfnWndProc = DefWindowProc;
-		dummyClass.lpszClassName = dummyText;
+		dummyClass.lpszClassName = mDummyText;
 		RegisterClass(&dummyClass);
 
-		HWND hwnd = CreateWindow(
-			dummyText,
-			dummyText,
+		mDummyHWND = CreateWindow(
+			mDummyText,
+			mDummyText,
 			WS_POPUP | WS_CLIPCHILDREN,
 			0, 0, 0, 0,
 			0,
@@ -61,7 +73,7 @@ namespace Claire
 			hInstance,
 			0);
 
-		HDC hdc = GetDC(hwnd);
+		HDC hdc = GetDC(mDummyHWND);
 
 		// assign a simple OpenGL pixel format that everyone supports
 		PIXELFORMATDESCRIPTOR pfd;
@@ -82,8 +94,8 @@ namespace Claire
 		bool success = true;
 
 		DeviceContextWin32 dc(hdc);
-		RenderContextGLWin32 dummyRenderContext(&dc);
-		success &= dummyRenderContext.makeCurrent();
+		mDummyRenderContext = std::make_unique<RenderContextGLWin32>(&dc);
+		success &= mDummyRenderContext->makeCurrent();
 
 		if(success)
 		{
@@ -114,12 +126,8 @@ namespace Claire
 			wglChoosePixelFormatARB = (PFNWGLCHOOSEPIXELFORMATARBPROC)wglGetProcAddress("wglChoosePixelFormatARB");
 			success &= (wglChoosePixelFormatARB != nullptr);
 
-			dummyRenderContext.release();
+			mDummyRenderContext->endCurrent();
 		}
-
-		// Clean up
-		DestroyWindow(hwnd);
-		UnregisterClass(dummyText, hInstance);
 
 		return success;
 	}

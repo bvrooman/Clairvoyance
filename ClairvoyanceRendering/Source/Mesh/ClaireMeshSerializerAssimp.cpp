@@ -194,7 +194,7 @@ namespace Claire
 
 		typedef set<VertexBufferFormat*> VertexBufferFormatSet;
 		VertexBufferFormatSet preferredBufferFormatSet;
-		for_each(semantics.begin(), semantics.end(), [&](IndexedVertexAttributeSemantic semantic)
+		for(auto&& semantic : semantics)
 		{
 			VertexBufferFormat* preferredBufferFormat = 
 				preferredVertexDataFormat.getVertexBufferFormatForSemantic(semantic);
@@ -204,21 +204,21 @@ namespace Claire
 				// Store all the unique buffer formats
 				preferredBufferFormatSet.insert(preferredBufferFormat);
 			}
-		});
+		}
 
 		VertexData* vertexData = subMesh->getVertexData();
 		size_t vcount = rawSubMesh->mNumVertices;
 
-		for_each(preferredBufferFormatSet.begin(), preferredBufferFormatSet.end(), [&](VertexBufferFormat* preferredBufferFormat)
+		for(auto&& preferredBufferFormat : preferredBufferFormatSet)
 		{
 			VertexBufferFormatUPtr bufferFormat =
 				std::make_unique<VertexBufferFormat>(preferredBufferFormat->getSequenceType());
-			for_each(semantics.begin(), semantics.end(), [&](IndexedVertexAttributeSemantic semantic)
+			for(auto&& semantic : semantics)
 			{
 				bufferFormat->addVertexAttribute(
 					*preferredBufferFormat->getVertexAttributeFromSemantic(semantic)
 					);
-			});
+			}
 
 			VertexFormat vertexFormatPiece =
 				bufferFormat->getVertexFormatPiece();
@@ -236,7 +236,7 @@ namespace Claire
 			VertexData::VertexBufferObjectHandle handle =
 				vertexData->addVertexBufferFormat(std::move(bufferFormat));
 			vertexData->bindVertexBuffer(handle, vbo);
-		});
+		}
 	}
 
 	void MeshSerializerAssimp::readVertexGeometryBuffer(const aiMesh* rawSubMesh, VertexBufferFormat* format, VertexBufferObject* vbo)
@@ -262,7 +262,7 @@ namespace Claire
 
 		void* pVertexData = vbo->lock(BufferObject::LS_DISCARD | BufferObject::LS_WRITE);
 
-		for_each(attributes.begin(), attributes.end(), [&](VertexAttribute attribute)
+		for(auto&& attribute : attributes)
 		{
 			size_t bytes = attribute.getSize() * vcount;
 			IndexedVertexAttributeSemantic indexedSemantic = attribute.getSemantic();
@@ -310,7 +310,7 @@ namespace Claire
 
 			// Increment the vertex data
 			pVertexData = static_cast<byte*>(pVertexData) + bytes;
-		});
+		}
 
 		vbo->unlock();
 	}
@@ -325,7 +325,7 @@ namespace Claire
 
 		for(size_t i = 0; i < vcount; i++)
 		{
-			for_each(attributes.begin(), attributes.end(), [&](VertexAttribute attribute)
+			for(auto&& attribute : attributes)
 			{
 				size_t bytes = attribute.getSize();
 				IndexedVertexAttributeSemantic indexedSemantic = attribute.getSemantic();
@@ -374,7 +374,7 @@ namespace Claire
 
 				// Increment the vertex data
 				pVertexData = static_cast<byte*>(pVertexData) + bytes;
-			});
+			}
 		}
 
 		vbo->unlock();

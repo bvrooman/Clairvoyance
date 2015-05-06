@@ -47,6 +47,11 @@ namespace Claire
 
 	}
 
+	Mesh* MeshManager::getMesh(const string& name) const
+	{
+		return (Mesh*)getResource(name);
+	}
+
 	Resource* MeshManager::createResource_(
 		const string& name,
 		const string& path

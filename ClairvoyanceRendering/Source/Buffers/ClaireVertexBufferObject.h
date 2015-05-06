@@ -20,8 +20,8 @@ namespace Claire
 		size_t getNumVertices(void) const { return mNumVertices; }
 
 	protected:
-		size_t mVertexSize;
-		size_t mNumVertices;
+		size_t mVertexSize = 0;
+		size_t mNumVertices = 0;
 	};
 
 	CLAIRE_NAMESPACE_END

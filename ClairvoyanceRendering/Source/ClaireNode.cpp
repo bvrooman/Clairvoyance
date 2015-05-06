@@ -148,7 +148,7 @@ namespace Claire
 		addToChain();
 
 		// For each child node:
-		for_each(mChildNodeVector.begin(), mChildNodeVector.end(), [&](Node* child)
+		for(auto&& child : mChildNodeVector)
 		{
 			// Recursively add the child node to the node chain
 			child->buildNodeChain_();
@@ -160,16 +160,16 @@ namespace Claire
 			// Notify this node in the node chain to
 			// tell it a child has been added
 			mNodeChain->notifyChildAdded(mHandle);
-		});
+		}
 	}
 
 	void Node::setNodeChain(NodeChainSPtr nodeChain)
 	{
 		mNodeChain = nodeChain;
-		for_each(mChildNodeVector.begin(), mChildNodeVector.end(), [&](Node* child)
+		for(auto&& child : mChildNodeVector)
 		{
 			child->setNodeChain(nodeChain);
-		});
+		}
 	}
 
 	void Node::addToChain(void)
@@ -219,10 +219,10 @@ namespace Claire
 	{
 		count++;
 
-		for_each(mChildNodeVector.begin(), mChildNodeVector.end(), [&](Node* child)
+		for(auto&& child : mChildNodeVector)
 		{
 			count = child->getTreeSize_(count);
-		});
+		}
 
 		return count;
 	}

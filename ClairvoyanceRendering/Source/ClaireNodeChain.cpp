@@ -27,10 +27,10 @@ namespace Claire
 		node->mHandle = mCurrentHandle;
 
 		// Add the node to each component
-		for_each(mComponentVector.begin(), mComponentVector.end(), [&](NodeChainComponentUPtr& component)
+		for(auto&& component : mComponentVector)
 		{
 			component->addNode(node);
-		});
+		}
 
 		// Increment the handle so that it can be used for the next node
 		mCurrentHandle++;
@@ -98,14 +98,14 @@ namespace Claire
 		}
 
 		// Update each pass
-		for_each(mUpdatePassList.begin(), mUpdatePassList.end(), [&](UpdatePassUPtr& pass)
+		for(auto&& pass : mUpdatePassList)
 		{
 			pass->update(
 				start,
 				end,
 				getFlatNodeData()
 				);
-		});
+		}
 	}
 
 	
@@ -125,7 +125,7 @@ namespace Claire
 		switch(mOrder)
 		{
 		case UPO_PRE_ORDER:
-			for_each(mComponentVector.begin(), mComponentVector.end(), [&](INodeChainComponent* component)
+			for(auto&& component : mComponentVector)
 			{
 				for(NodeHandle i = start; i < end; i++)
 				{
@@ -134,11 +134,11 @@ namespace Claire
 						nodes[i]
 						);
 				}
-			});
+			}
 			break;
 
 		case UPO_POST_ORDER:
-			for_each(mComponentVector.begin(), mComponentVector.end(), [&](INodeChainComponent* component)
+			for(auto&& component : mComponentVector)
 			{
 				for(NodeHandle i = end; i-- > start;)
 				{
@@ -147,7 +147,7 @@ namespace Claire
 						nodes[i]
 						);
 				}
-			});
+			}
 			break;
 		}
 	}

@@ -7,10 +7,6 @@ namespace Claire
 	BufferObject::BufferObject(BufferObjectManager* manager, EnumFlags usageSettings = 0)
 		: mManager(manager)
 		, mUsageSettingsFlags(usageSettings)
-		, mBytes(0)
-		, mLockOffset(0)
-		, mLockLength(0)
-		, mIsLocked(0)
 	{
 
 	}

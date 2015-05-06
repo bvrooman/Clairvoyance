@@ -48,10 +48,10 @@ namespace Claire
 
 	void RenderTarget::updateViewports(void)
 	{
-		std::for_each(mViewportVector.begin(), mViewportVector.end(), [](Viewport* viewport)
+		for(auto&& viewport : mViewportVector)
 		{
 			viewport->update();
-		});
+		}
 	}
 
 	CLAIRE_NAMESPACE_END

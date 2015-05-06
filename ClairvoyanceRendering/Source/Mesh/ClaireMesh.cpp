@@ -11,8 +11,6 @@ namespace Claire
 
 	Mesh::Mesh(const string& name, const string& path, ResourceManager* manager)
 		: Resource(name, path, manager)
-		, mVertexBufferUsageSettingsFlags(BufferObject::US_WRITE_ONLY)
-		, mIndexBufferUsageSettingsFlags(BufferObject::US_WRITE_ONLY)
 	{
 		mMeshManager = static_cast<MeshManager*>(mManager);
 	}
@@ -34,17 +32,14 @@ namespace Claire
 	void Mesh::calculateAABB(void)
 	{
 		mAABB.clear();
-		for(SubMeshList::const_iterator it = mSubMeshList.begin();
-			it != mSubMeshList.end();
-			it++)
+		for(auto && subMesh : mSubMeshList)
 		{
-			mAABB.merge(it->get()->getAABB());
+			mAABB.merge(subMesh->getAABB());
 		}
 	}
 
 	void Mesh::preload_(void)
 	{
-
 	}
 
 	void Mesh::load_(void)
@@ -57,25 +52,20 @@ namespace Claire
 
 	void Mesh::postload_(void)
 	{
-		for(SubMeshList::const_iterator it = mSubMeshList.begin();
-			it != mSubMeshList.end();
-			it++)
+		for(auto&& subMesh : mSubMeshList)
 		{
-			it->get()->calculateAABBFromBuffer();
+			subMesh->calculateAABBFromBuffer();
 		}
 		calculateAABB();
 	}
 
 	void Mesh::unload_(void)
 	{
-
 	}
 
 	void Mesh::calculateSize(void)
 	{
-
 	}
-
 
 	CLAIRE_NAMESPACE_END
 }

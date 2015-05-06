@@ -5,7 +5,6 @@ namespace Claire
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 	
 	VertexFormat::VertexFormat(void)
-		: mVertexSize(0)
 	{
 	}
 
@@ -15,20 +14,14 @@ namespace Claire
 
 	const VertexAttribute* VertexFormat::getVertexAttributeFromSemantic(IndexedVertexAttributeSemantic semantic) const
 	{
-		const VertexAttribute* ret = nullptr;
-		for(
-			VertexAttributeVector::const_iterator it = mVertexAttributeVector.begin();
-			it != mVertexAttributeVector.end(); 
-			it++
-			)
+		for(auto&& attribute : mVertexAttributeVector)
 		{
-			const VertexAttribute* attribute = &(*it);
-			if (attribute->getSemantic() == semantic)
+			if(attribute.getSemantic() == semantic)
 			{
-				ret = attribute;
+				return &attribute;
 			}
 		}
-		return ret;
+		return nullptr;
 	}
 
 	bool VertexFormat::hasSemantic(IndexedVertexAttributeSemantic semantic) const

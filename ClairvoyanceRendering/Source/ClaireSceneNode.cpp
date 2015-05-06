@@ -49,21 +49,21 @@ namespace Claire
 		{
 			mSceneObjectAABBReference->clear();
 
-			for_each(mSceneObjectMap.begin(), mSceneObjectMap.end(), [&](SceneObjectMap::value_type& type)
+			for(auto&& type : mSceneObjectMap)
 			{
 				type.second->calculateWorldAABB();
 
 				mSceneObjectAABBReference->merge(
 					type.second->getWorldAABB()
 					);
-			});
+			}
 		}
 
-		for_each(mChildNodeVector.begin(), mChildNodeVector.end(), [](Node* node)
+		for(auto&& child : mChildNodeVector)
 		{
-			SceneNode* sceneNode = static_cast<SceneNode*>(node);
+			SceneNode* sceneNode = static_cast<SceneNode*>(child);
 			sceneNode->updateSceneObjectAABB();
-		});
+		}
 	}
 
 	SceneNode::SceneNode(

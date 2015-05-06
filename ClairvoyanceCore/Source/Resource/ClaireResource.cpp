@@ -8,8 +8,6 @@ namespace Claire
 		: mName(name)
 		, mPath(path)
 		, mManager(manager)
-		, mSize(0)
-		, mLoaded(false)
 	{
 
 	}

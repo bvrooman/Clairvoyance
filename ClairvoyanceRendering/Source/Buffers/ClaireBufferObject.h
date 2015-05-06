@@ -61,23 +61,25 @@ namespace Claire
 		virtual void writeData(size_t offset, size_t length, const void* pSrc, bool discardWholeBuffer) CLAIRE_ABSTRACT;
 
 	protected:
-		BufferObjectManager* mManager;
+		BufferObjectManager* mManager = nullptr;
 
-		EnumFlags mUsageSettingsFlags;
+		// Usage settings
+		EnumFlags mUsageSettingsFlags = 0;
 
 		// Size in bytes
-		size_t mBytes;
+		size_t mBytes = 0;
 
 		// Where in the buffer the lock starts
-		size_t mLockOffset;
+		size_t mLockOffset = 0;
 
 		// The size of the locked data
-		size_t mLockLength;
+		size_t mLockLength = 0;
 
-		EnumFlags mLockSettings;
+		// Lock settings
+		EnumFlags mLockSettings = 0;
 
 	private:
-		bool mIsLocked;
+		bool mIsLocked = false;
 	};
 
 	typedef ushort BufferHandle;

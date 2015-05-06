@@ -27,20 +27,18 @@ namespace Claire
 			return nullptr;
 		}
 
-		VertexBufferFormat* formatForSemantic = nullptr;
-		for (size_t i = 0; i < mNumVertexBufferFormats; i ++)
+		for(auto&& bufferFormat : range(mVertexBufferFormats, 0, mNumVertexBufferFormats))
 		{
-			VertexBufferFormat* bufferFormat = mVertexBufferFormats[i];
 			VertexBufferFormat::VertexAttributeVector attributes = bufferFormat->getVertexAttributeVector();
-			for_each(attributes.begin(), attributes.end(), [&](VertexAttribute attribute)
+			for(auto&& attribute : attributes)
 			{
 				if(attribute.getSemantic() == semantic)
 				{
-					formatForSemantic = bufferFormat;
+					return bufferFormat;
 				}
-			});
+			}
 		}
-		return formatForSemantic;
+		return nullptr;
 	}
 
 	const VertexBufferFormat* const* VertexDataFormat::getVertexBufferFormats(void) const
@@ -48,6 +46,10 @@ namespace Claire
 		return mVertexBufferFormats.data();
 	}
 
+	size_t VertexDataFormat::getNumVertexBufferFormats(void) const
+	{
+		return mNumVertexBufferFormats;
+	}
 
 	CLAIRE_NAMESPACE_END
 }

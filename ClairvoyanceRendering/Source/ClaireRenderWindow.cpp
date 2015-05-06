@@ -58,30 +58,29 @@ namespace Claire
 	void RenderWindow::notifyOnResize(void)
 	{
 		RenderWindowEvent event(this);
-		std::for_each(mRenderWindowEventListeners.begin(), mRenderWindowEventListeners.end(), [&](IRenderWindowEventListener* listener)
+		for(auto&& listener : mRenderWindowEventListeners)
 		{
 			listener->onWindowResize(event);
-		});
+		}
 	}
 
 	void RenderWindow::notifyOnMove(void)
 	{
 		RenderWindowEvent event(this);
-		std::for_each(mRenderWindowEventListeners.begin(), mRenderWindowEventListeners.end(), [&](IRenderWindowEventListener* listener)
+		for(auto&& listener : mRenderWindowEventListeners)
 		{
 			listener->onWindowMove(event);
-		});
+		}
 	}
 
 	void RenderWindow::notifyOnClose(void)
 	{
 		RenderWindowEvent event(this);
-		std::for_each(mRenderWindowEventListeners.begin(), mRenderWindowEventListeners.end(), [&](IRenderWindowEventListener* listener)
+		for(auto&& listener : mRenderWindowEventListeners)
 		{
 			listener->onWindowClose(event);
-		});
+		}
 	}
-
 
 	CLAIRE_NAMESPACE_END
 }

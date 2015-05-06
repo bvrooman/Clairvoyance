@@ -1,6 +1,5 @@
 #include "Win32\ClairePluginGLWin32.h"
 
-
 #include "ClaireRenderRoot.h"
 #include "ClaireScene.h"
 #include "ClaireCamera.h"
@@ -34,7 +33,6 @@ int CALLBACK WinMain(
 {
 #endif
 	PluginGLWin32 plugin;
-	
 
 	RenderRootUPtr root = std::make_unique<RenderRoot>();
 	root->addPlugin(&plugin);
@@ -58,7 +56,7 @@ int CALLBACK WinMain(
 	Viewport* vp2 = window->createViewport(camera, 1, Colour::Green, 0.5, 0, 0.5, 1);
 
 	//root->getMeshManager()->loadResource("Bench", "bench.obj");
-	root->getMeshManager()->loadResource("Women", "Women.3ds");
+	//root->getMeshManager()->loadResource("Women", "Women.3ds");
 	root->getMeshManager()->loadResource("Box", "box.fbx");
 	//Entity* e = scene->createEntity("HelloWorld", "Box");
 

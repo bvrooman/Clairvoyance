@@ -39,7 +39,7 @@ namespace Claire
 		SequenceType mSequenceType;
 
 		/*
-		The set of vertex attribute that compose the format of
+		The set of vertex attributes that compose the format of
 		the related buffer object.
 		*/
 		VertexAttributeVector mVertexAttributeVector;

@@ -44,7 +44,7 @@ namespace Claire
 		{}
 
 		VertexAttributeSemantic semantic;
-		size_t index;
+		size_t index = 0;
 
 		bool operator == (const IndexedVertexAttributeSemantic& other) const
 		{
@@ -101,7 +101,7 @@ namespace Claire
 	private:
 		IndexedVertexAttributeSemantic mSemantic;
 		VertexAttributeType mType;
-		ushort mCount;
+		ushort mCount = 0;
 	};
 
 	typedef ushort VertexAttributeHandle;

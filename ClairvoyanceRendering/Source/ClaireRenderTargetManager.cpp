@@ -40,18 +40,18 @@ namespace Claire
 
 	void RenderTargetManager::updateAllRenderTargets(void)
 	{
-		std::for_each(mRenderTargetVector.begin(), mRenderTargetVector.end(), [](RenderTarget* target)
+		for(auto&& target : mRenderTargetVector)
 		{
 			target->update();
-		});
+		}
 	}
 
 	void RenderTargetManager::swapAllRenderTargetBuffers(void)
 	{
-		std::for_each(mRenderTargetVector.begin(), mRenderTargetVector.end(), [](RenderTarget* target)
+		for(auto&& target : mRenderTargetVector)
 		{
 			target->swapBuffers();
-		});
+		}
 	}
 
 	CLAIRE_NAMESPACE_END

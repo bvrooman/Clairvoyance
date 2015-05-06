@@ -56,19 +56,18 @@ namespace Claire
 
 	VertexData::VertexBufferObjectHandle VertexData::getVBOHandleFromSemantic(IndexedVertexAttributeSemantic semantic)
 	{
-		VertexBufferObjectHandle ret = INVALID_HANDLE;
-		for_each(mVBOHandleList.begin(), mVBOHandleList.end(), [&](VertexBufferObjectHandle handle)
+		for(auto&& handle : mVBOHandleList)
 		{
 			VertexBufferFormat* format = getVertexBufferFormat(handle);
 			if(format)
 			{
-				if (format->getVertexFormatPiece().hasSemantic(semantic))
+				if(format->getVertexFormatPiece().hasSemantic(semantic))
 				{
-					ret = handle;
+					return handle;
 				}
 			}
-		});
-		return ret;
+		}
+		return INVALID_HANDLE;
 	}
 
 	CLAIRE_NAMESPACE_END

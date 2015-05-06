@@ -6,12 +6,10 @@ namespace Claire
 
 	BufferObjectManager::BufferObjectManager(void)
 	{
-
 	}
 
 	BufferObjectManager::~BufferObjectManager(void)
 	{
-
 	}
 
 	CLAIRE_NAMESPACE_END
