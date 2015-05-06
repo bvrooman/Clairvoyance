@@ -17,7 +17,7 @@ namespace Claire
 		void returnBlock(void* ptr);
 
 	private:
-		Freelist* mNext;
+		Freelist* mNext = nullptr;
 	};
 
 	CLAIRE_NAMESPACE_END

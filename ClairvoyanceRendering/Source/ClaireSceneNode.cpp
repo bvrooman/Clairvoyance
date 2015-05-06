@@ -14,8 +14,6 @@ namespace Claire
 		const Transform& transform
 		)
 		: Node(name, transform)
-		, mSceneObjectAABBReference(nullptr)
-		, mWorldAABBReference(nullptr)
 	{
 		setup();
 	}
@@ -24,8 +22,6 @@ namespace Claire
 		const Transform& transform
 		)
 		: Node(transform)
-		, mSceneObjectAABBReference(nullptr)
-		, mWorldAABBReference(nullptr)
 	{
 		setup();
 	}
@@ -72,8 +68,6 @@ namespace Claire
 		const Transform& transform
 		)
 		: Node(nodeChain, name, transform)
-		, mSceneObjectAABBReference(nullptr)
-		, mWorldAABBReference(nullptr)
 	{
 	}
 
@@ -82,8 +76,6 @@ namespace Claire
 		const Transform& transform
 		)
 		: Node(nodeChain, transform)
-		, mSceneObjectAABBReference(nullptr)
-		, mWorldAABBReference(nullptr)
 	{
 	}
 

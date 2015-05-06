@@ -5,7 +5,6 @@ namespace Claire
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 
 	VertexData::VertexData(void)
-		: mCurrentHandle(0)
 	{
 
 	}

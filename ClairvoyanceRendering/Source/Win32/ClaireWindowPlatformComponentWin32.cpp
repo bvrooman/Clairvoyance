@@ -15,7 +15,6 @@ namespace Claire
 
 	WindowPlatformComponentWin32::WindowPlatformComponentWin32(RenderWindow* parentRenderWindow)
 		: WindowPlatformComponent(parentRenderWindow)
-		, mHWnd(nullptr)
 	{
 	}
 

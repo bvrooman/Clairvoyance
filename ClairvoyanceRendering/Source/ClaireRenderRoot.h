@@ -76,17 +76,17 @@ namespace Claire
 		*/
 		typedef map<string, RenderSystem*> RenderSystemMap;
 		RenderSystemMap mInstalledRenderSystemMap;
-		RenderSystem* mActiveRenderSystem;
+		RenderSystem* mActiveRenderSystem = nullptr;
 
 		// Owned resource managers
-		ResourceManagerUPtr mMeshManager;
+		ResourceManagerUPtr mMeshManager = nullptr;
 
 		// Scene manager
-		SceneManagerUPtr mSceneManager;
+		SceneManagerUPtr mSceneManager = nullptr;
 		
-		bool mRendering;
+		bool mRendering = false;
 
-		RenderWindow* mMainRenderWindow;
+		RenderWindow* mMainRenderWindow = nullptr;
 	};
 
 	using RenderRootUPtr = std::unique_ptr<RenderRoot>;

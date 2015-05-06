@@ -5,7 +5,6 @@ namespace Claire
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 
 	VertexDataFormat::VertexDataFormat(void)
-	: mNumVertexBufferFormats(0)
 	{
 	}
 

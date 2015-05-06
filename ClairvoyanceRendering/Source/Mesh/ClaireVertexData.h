@@ -45,7 +45,7 @@ namespace Claire
 		void bindVertexBufferFormat(VertexBufferObjectHandle handle, VertexBufferFormatUPtr format);
 
 	private:
-		VertexBufferObjectHandle mCurrentHandle;
+		VertexBufferObjectHandle mCurrentHandle = 0;
 
 		VBOHandleList mVBOHandleList;
 		VertexBufferObjectMap mVertexBufferObjectMap;

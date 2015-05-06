@@ -5,8 +5,6 @@ namespace Claire
 	CLAIRE_NAMESPACE_BEGIN(math)
 
 	Plane::Plane(void)
-		: normal(Vector3::ZERO)
-		, d(0)
 	{
 	}
 

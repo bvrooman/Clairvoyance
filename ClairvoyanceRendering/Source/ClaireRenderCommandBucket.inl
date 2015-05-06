@@ -4,7 +4,6 @@ namespace Claire
 
 	template <typename T>
 	RenderCommandBucket<T>::RenderCommandBucket(size_t size)
-		: mCurrentIndex(0)
 	{
 		mKeys = new Key[size];
 		mPackets = new RenderCommandPacket[size];

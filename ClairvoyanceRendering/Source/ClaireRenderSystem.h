@@ -59,14 +59,14 @@ namespace Claire
 	protected:
 		string mName;
 
-		bool mInitialized;
+		bool mInitialized = false;
 
 		BufferObectManagerUPtr mBufferObjectManager;
 
 		RenderTargetManager mRenderTargetManager;
 		RenderWindowManager mRenderWindowManager;
 
-		Viewport* mActiveViewport;
+		Viewport* mActiveViewport = nullptr;
 	};
 
 	typedef std::unique_ptr<RenderSystem> RenderSystemUPtr;

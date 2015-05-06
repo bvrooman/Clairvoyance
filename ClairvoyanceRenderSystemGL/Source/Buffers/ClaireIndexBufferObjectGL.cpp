@@ -8,10 +8,6 @@ namespace Claire
 
 	IndexBufferObjectGL::IndexBufferObjectGL(BufferObjectManager* manager, IndexType indexType, size_t numIndices, EnumFlags usageSettings)
 		: IndexBufferObject(manager, indexType, numIndices, usageSettings)
-		, mScratchOffset(0)
-		, mScratchLength(0)
-		, mScratchPtr(nullptr)
-		, mLockedToScratch(false)
 	{
 		mBufferTarget = GL_ELEMENT_ARRAY_BUFFER;
 

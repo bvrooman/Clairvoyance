@@ -16,8 +16,6 @@ namespace Claire
 			windowRendererSupport,
 			&mRenderTargetManager
 			)
-		, mInitialized(false)
-		, mActiveViewport(nullptr)
 	{	
 	}
 

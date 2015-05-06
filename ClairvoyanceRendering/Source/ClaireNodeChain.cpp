@@ -9,8 +9,6 @@ namespace Claire
 
 	NodeChain::NodeChain(Node* rootNode)
 		: mRootNode(rootNode)
-		, mBuildNeeded(true)
-		, mCurrentHandle(0)
 	{
 		mComponentVector.reserve(4);
 		mUpdatePassList.reserve(2);

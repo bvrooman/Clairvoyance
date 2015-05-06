@@ -89,9 +89,9 @@ namespace Claire
 		inline void update(const Node* node);
 
 	private:
-		Node* mRootNode;
+		Node* mRootNode = nullptr;
 
-		bool mBuildNeeded;
+		bool mBuildNeeded = true;
 
 		typedef vector<UpdatePassUPtr> UpdatePassList;
 		UpdatePassList mUpdatePassList;
@@ -102,7 +102,7 @@ namespace Claire
 
 		// A monotonically increasing handle assigned to each node
 		// when adding it to the chain
-		NodeHandle mCurrentHandle;
+		NodeHandle mCurrentHandle = 0;
 
 		// Flat nodes
 		std::array<FlatNode, CHAIN_SIZE> mNodes;

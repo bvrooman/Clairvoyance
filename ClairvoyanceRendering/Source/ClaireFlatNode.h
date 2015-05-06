@@ -11,12 +11,10 @@ namespace Claire
 	{
 	public:
 		FlatNode(void)
-			: parentHandle(0)
-			, numChildren(0)
 		{}
 
-		NodeHandle parentHandle;
-		size_t numChildren;
+		NodeHandle parentHandle = 0;
+		size_t numChildren = 0;
 	};
 
 	CLAIRE_NAMESPACE_END

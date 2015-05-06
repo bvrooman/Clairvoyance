@@ -44,7 +44,7 @@ namespace Claire
 		void setViewport(Viewport* viewport);
 
 	private:
-		SceneManager* mManager;
+		SceneManager* mManager = nullptr;
 		string mName;
 
 		RenderSystem* mRenderSystem;
@@ -52,8 +52,8 @@ namespace Claire
 		typedef OwningManager<Camera, string> CameraManagerImpl;
 		CameraManagerImpl mCameraManagerImpl;
 
-		const Camera* mCurrentCamera;
-		const Viewport* mCurrentViewport;
+		const Camera* mCurrentCamera = nullptr;
+		const Viewport* mCurrentViewport = nullptr;
 
 		// Scene object factories
 		SceneObjectFactoryUPtr mEntityFactory;

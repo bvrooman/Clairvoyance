@@ -8,10 +8,6 @@ namespace Claire
 
 	VertexBufferObjectGL::VertexBufferObjectGL(BufferObjectManager* manager, size_t vertexSize, size_t numVertices, EnumFlags usageSettings)
 		: VertexBufferObject(manager, vertexSize, numVertices, usageSettings)
-		, mScratchOffset(0)
-		, mScratchLength(0)
-		, mScratchPtr(nullptr)
-		, mLockedToScratch(false)
 	{
 		mBufferTarget = GL_ARRAY_BUFFER;
 

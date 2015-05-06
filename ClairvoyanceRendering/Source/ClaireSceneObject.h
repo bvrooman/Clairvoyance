@@ -32,7 +32,7 @@ namespace Claire
 	protected:
 		string mName;
 
-		SceneNode* mParentSceneNode;
+		SceneNode* mParentSceneNode = nullptr;
 
 		AxisAlignedBoundingBox mLocalAABB;
 		AxisAlignedBoundingBox mWorldAABB;

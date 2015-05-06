@@ -68,8 +68,8 @@ namespace Claire
 		typedef map<string, SceneObject*> SceneObjectMap;
 		SceneObjectMap mSceneObjectMap;
 
-		AxisAlignedBoundingBox* mSceneObjectAABBReference;
-		AxisAlignedBoundingBox* mWorldAABBReference;
+		AxisAlignedBoundingBox* mSceneObjectAABBReference = nullptr;
+		AxisAlignedBoundingBox* mWorldAABBReference = nullptr;
 
 		static NameGenerator sNameGenerator;
 	};

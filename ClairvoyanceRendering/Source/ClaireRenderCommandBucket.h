@@ -35,7 +35,7 @@ namespace Claire
 		Key* mKeys;
 		RenderCommandPacket* mPackets;
 
-		size_t mCurrentIndex;
+		size_t mCurrentIndex = 0;
 	};
 
 	CLAIRE_NAMESPACE_END

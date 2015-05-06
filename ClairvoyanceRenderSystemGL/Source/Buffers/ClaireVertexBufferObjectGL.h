@@ -24,10 +24,10 @@ namespace Claire
 		void writeData(size_t offset, size_t length, const void* pSrc, bool discardWholeBuffer);
 
 	private:
-		size_t mScratchOffset;
-		size_t mScratchLength;
-		void* mScratchPtr;
-		bool mLockedToScratch;
+		size_t mScratchOffset = 0;
+		size_t mScratchLength = 0;
+		void* mScratchPtr = nullptr;
+		bool mLockedToScratch = false;
 
 		GLenum mBufferTarget;
 		GLuint mBufferID;

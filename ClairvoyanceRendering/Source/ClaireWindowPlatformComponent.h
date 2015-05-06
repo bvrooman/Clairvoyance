@@ -40,16 +40,16 @@ namespace Claire
 		bool getFullscreen(void);
 
 	protected:
-		RenderWindow* mParentRenderWindow;
+		RenderWindow* mParentRenderWindow = nullptr;
 		string mDeviceName;
 
-		DeviceContextUPtr mDeviceContext;
+		DeviceContextUPtr mDeviceContext = nullptr;
 
 		PixelFormatUPtr mPixelFormat;
 
-		size_t mLeft;
-		size_t mTop;
-		size_t mColourDepth; 
+		size_t mLeft = 0;
+		size_t mTop = 0;
+		size_t mColourDepth = 0; 
 	};
 
 	typedef std::unique_ptr<WindowPlatformComponent> WindowPlatformComponentUPtr;

@@ -30,8 +30,8 @@ namespace Claire
 		inline void initialize(size_t size);
 
 	private:
-		void* mMemory;
-		bool mUsePreallocatedMemory;
+		void* mMemory = nullptr;
+		bool mUsePreallocatedMemory = false;
 
 	private:
 		static const size_t MIN_FREE_BLOCK_SIZE = 16;
@@ -41,20 +41,17 @@ namespace Claire
 		{
 		public:
 			Chunk(size_t sz)
-				: mNext(nullptr)
-				, mPrev(nullptr)
-				, mDataSize(sz)
-				, mFree(true)
+				: mDataSize(sz)
 			{}
 
 			void write(void* dest) { memcpy(dest, this, sizeof(Chunk)); }
 			void read(void* src) { memcpy(this, src, sizeof(Chunk)); }
 
 		public:
-			Chunk* mNext;
-			Chunk* mPrev;
-			size_t mDataSize;
-			bool mFree;
+			Chunk* mNext = nullptr;
+			Chunk* mPrev = nullptr;
+			size_t mDataSize = 0;
+			bool mFree = true;
 		};
 	};
 

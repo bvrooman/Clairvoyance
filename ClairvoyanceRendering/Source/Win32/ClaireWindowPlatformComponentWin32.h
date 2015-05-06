@@ -40,7 +40,7 @@ namespace Claire
 		DWORD getWindowedWindowStyle(void) { return mWindowedWindowStyle; }
 
 	protected:
-		HWND mHWnd;
+		HWND mHWnd = nullptr;
 
 		DWORD mFullscreenWindowStyle;
 		DWORD mWindowedWindowStyle;

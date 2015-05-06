@@ -34,11 +34,6 @@ namespace Claire
 	{
 	public:
 		MemoryPool(void)
-			: mTotalPoolSize(0)
-			, mFreePoolSize(0)
-			, mTrashOnCreation(CLAIRE_TRASH_POOLS)
-			, mTrashOnAlloc(CLAIRE_TRASH_POOLS)
-			, mTrashOnDealloc(CLAIRE_TRASH_POOLS)
 		{}
 
 		virtual ~MemoryPool(void)
@@ -58,12 +53,12 @@ namespace Claire
 		inline virtual size_t getMaxAllocationSize(void) const CLAIRE_ABSTRACT;
 
 	protected:
-		int64_t mTotalPoolSize;
-		int64_t mFreePoolSize;
+		int64_t mTotalPoolSize = 0;
+		int64_t mFreePoolSize = 0;
 
-		bool mTrashOnCreation;
-		bool mTrashOnAlloc;
-		bool mTrashOnDealloc;
+		bool mTrashOnCreation = CLAIRE_TRASH_POOLS;
+		bool mTrashOnAlloc = CLAIRE_TRASH_POOLS;
+		bool mTrashOnDealloc = CLAIRE_TRASH_POOLS;
 
 	public:
 		static const byte TRASH_ON_CREATION_SIGNATURE = 0xCC;

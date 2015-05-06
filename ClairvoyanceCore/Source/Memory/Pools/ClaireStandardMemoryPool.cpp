@@ -5,8 +5,7 @@ namespace Claire
 	CLAIRE_NAMESPACE_BEGIN(core)
 
 	StandardMemoryPool::StandardMemoryPool(const void* start, const void* end)
-		: mMemory(nullptr)
-		, mUsePreallocatedMemory(true)
+		: mUsePreallocatedMemory(true)
 	{
 		assert(end >= start);
 
@@ -20,8 +19,7 @@ namespace Claire
 	}
 
 	StandardMemoryPool::StandardMemoryPool(size_t size)
-		: mMemory(nullptr)
-		, mUsePreallocatedMemory(false)
+		: mUsePreallocatedMemory(false)
 	{
 		assert(size >= 0);
 

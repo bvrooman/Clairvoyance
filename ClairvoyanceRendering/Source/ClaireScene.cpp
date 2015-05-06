@@ -19,8 +19,6 @@ namespace Claire
 		: mName(name)
 		, mRenderSystem(renderSystem)
 		, mManager(manager)
-		, mCurrentCamera(nullptr)
-		, mCurrentViewport(nullptr)
 	{
 		mEntityFactory = std::make_unique<EntityFactory>(mManager->getMeshManager());
 	}

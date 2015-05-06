@@ -17,11 +17,6 @@ namespace Claire
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 	
 	RenderRoot::RenderRoot(void)
-		: mActiveRenderSystem(nullptr)
-		, mMeshManager(nullptr)
-		, mSceneManager(nullptr)
-		, mRendering(false)
-		, mMainRenderWindow(nullptr)
 	{
 	}
 

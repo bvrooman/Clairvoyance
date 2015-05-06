@@ -8,7 +8,6 @@ namespace Claire
 
 	SceneObject::SceneObject(const string& name)
 		: mName(name)
-		, mParentSceneNode(nullptr)
 	{
 	}
 

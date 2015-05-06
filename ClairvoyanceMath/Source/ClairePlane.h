@@ -20,8 +20,8 @@ namespace Claire
 		real getDistance(const Vector3& point) const;
 
 	public:
-		Vector3 normal;
-		real d;
+		Vector3 normal = Vector3::ZERO;
+		real d = 0;
 	};
 
 	CLAIRE_NAMESPACE_END
