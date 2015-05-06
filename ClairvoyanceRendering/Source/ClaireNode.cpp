@@ -13,10 +13,6 @@ namespace Claire
 		const Transform& transform
 		)
 		: mName(name)
-		, mHandle(0)
-		, mParentNode(nullptr)
-		, mTransform(nullptr)
-		, mDerivedTransform(nullptr)
 		, mInitialTransform(transform)
 	{
 		createNodeChain();
@@ -26,10 +22,7 @@ namespace Claire
 	Node::Node(
 		const Transform& transform
 		)
-		: mParentNode(nullptr)
-		, mTransform(nullptr)
-		, mDerivedTransform(nullptr)
-		, mInitialTransform(transform)
+		: mInitialTransform(transform)
 	{
 		mName = sNameGenerator.generate();
 		createNodeChain();
@@ -54,9 +47,6 @@ namespace Claire
 		)
 		: mNodeChain(nodeChain)
 		, mName(name)
-		, mParentNode(nullptr)
-		, mTransform(nullptr)
-		, mDerivedTransform(nullptr)
 		, mInitialTransform(transform)
 	{
 		mTransformPass = mNodeChain->getManualUpdatePass(0);
@@ -67,9 +57,6 @@ namespace Claire
 		const Transform& transform
 		)
 		: mNodeChain(nodeChain)
-		, mParentNode(nullptr)
-		, mTransform(nullptr)
-		, mDerivedTransform(nullptr)
 		, mInitialTransform(transform)
 	{
 		mName = sNameGenerator.generate();

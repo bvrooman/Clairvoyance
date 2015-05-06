@@ -142,6 +142,11 @@ namespace Claire
 		return Radian(a / b.valueRadians());
 	}
 
+	inline Radian operator "" _rad(long double radians)
+	{
+		return Radian(radians);
+	}
+
 	CLAIRE_NAMESPACE_END
 }
 

@@ -72,18 +72,18 @@ namespace Claire
 			);
 
 	private:
-		ProjectionType mProjectionType;
+		ProjectionType mProjectionType = PT_PERSPECTIVE;
 
 		Plane mPlanes[6];
 
 		// Used to build the projection matrix
-		real mNearDistance;
-		real mFarDistance;
-		real mAspectRatio;
-		Radian mFieldOfViewY;
+		real mNearDistance = 1;
+		real mFarDistance = 3000;
+		real mAspectRatio = 4.0f / 3;
+		Radian mFieldOfViewY = Radian(PI / 6);
 
-		Matrix4 mProjectionMatrix;
-		Matrix4 mViewMatrix;
+		Matrix4 mProjectionMatrix = Matrix4::IDENTITY;
+		Matrix4 mViewMatrix = Matrix4::IDENTITY;
 	};
 
 	CLAIRE_NAMESPACE_END

@@ -6,46 +6,37 @@
 #include <algorithm>
 #include <Windows.h>
 
-
-#include <windows.h>
-size_t cache_line_size() {
-	size_t line_size = 0;
-	DWORD buffer_size = 0;
-	DWORD i = 0;
-	SYSTEM_LOGICAL_PROCESSOR_INFORMATION * buffer = 0;
-
-	GetLogicalProcessorInformation(0, &buffer_size);
-	buffer = (SYSTEM_LOGICAL_PROCESSOR_INFORMATION *)malloc(buffer_size);
-	GetLogicalProcessorInformation(&buffer[0], &buffer_size);
-
-	for (i = 0; i != buffer_size / sizeof(SYSTEM_LOGICAL_PROCESSOR_INFORMATION); ++i) {
-		if (buffer[i].Relationship == RelationCache && buffer[i].Cache.Level == 1) {
-			line_size = buffer[i].Cache.LineSize;
-			break;
-		}
-	}
-
-	free(buffer);
-	return line_size;
+float operator "" _deg(long double v)
+{
+	return v * 2;
 }
 
-struct MyStruct
+class Obj
 {
-	int i;
-	int* p;
-	//std::string s;
+public:
+	Obj(float i)
+		: j(i)
+	{
+
+	}
+
+	float j;
 };
+
+Obj operator "" _obj(long double v)
+{
+	return Obj(v);
+}
 
 int main()
 {
-	std::cout << std::is_pod < MyStruct >::value << "\n";
+	float i = 2.0_deg;
 
+	Obj j = 8.0_obj;
 
-	SYSTEM_INFO s;
-	GetSystemInfo(&s);
+	std::cout << i << "\n";
+	std::cout << j.j << "\n";
 
-	std::cout << s.dwPageSize << "\n";
-	std::cout << cache_line_size() << "\n";
 
 	system("PAUSE");
 }

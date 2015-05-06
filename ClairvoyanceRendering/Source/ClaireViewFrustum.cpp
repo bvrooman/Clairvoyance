@@ -7,13 +7,6 @@ namespace Claire
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 
 	ViewFrustum::ViewFrustum(void)
-		: mProjectionType(PT_PERSPECTIVE)
-		, mNearDistance(1)
-		, mFarDistance(3000)
-		, mAspectRatio(4.0f / 3)
-		, mFieldOfViewY(math::PI / 6)
-		, mProjectionMatrix(Matrix4::IDENTITY)
-		, mViewMatrix(Matrix4::IDENTITY)
 	{
 	}
 

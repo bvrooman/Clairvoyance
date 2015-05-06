@@ -21,4 +21,4 @@ namespace Claire
 	CLAIRE_NAMESPACE_END
 }
 
-#endif
+#endif 

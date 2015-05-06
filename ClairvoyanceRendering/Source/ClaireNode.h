@@ -107,7 +107,7 @@ namespace Claire
 		string mName;
 
 		// Parent node
-		Node* mParentNode;
+		Node* mParentNode = nullptr;
 
 		// Child nodes
 		typedef OwningManager<Node, string> NodeManagerImpl;
@@ -117,15 +117,15 @@ namespace Claire
 		NodeVector mChildNodeVector;
 
 		// Transform relative to local space
-		Transform* mTransform;
+		Transform* mTransform = nullptr;
 		// Transform relative to global space
-		Transform* mDerivedTransform;
+		Transform* mDerivedTransform = nullptr;
 
 		// Node chain shared among all children
 		NodeChainSPtr mNodeChain;
 
 	private:
-		NodeHandle mHandle;
+		NodeHandle mHandle = 0;
 
 		Transform mInitialTransform;
 

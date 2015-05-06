@@ -142,6 +142,11 @@ namespace Claire
 		return Degree(a / b.valueDegrees());
 	}
 
+	inline Degree operator "" _deg(long double degrees)
+	{
+		return Degree(degrees);
+	}
+	
 	CLAIRE_NAMESPACE_END
 }
 

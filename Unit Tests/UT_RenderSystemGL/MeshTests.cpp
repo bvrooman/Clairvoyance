@@ -7,7 +7,7 @@
 
 using namespace Claire::rendering;
 
-TEST(VertexDataFormat, blah)
+TEST(Mesh, blah)
 {
 	PluginGLWin32 plugin;
 
