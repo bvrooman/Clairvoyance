@@ -144,7 +144,15 @@ namespace Claire
 
 	inline Radian operator "" _rad(long double radians)
 	{
+		#if CLAIRE_COMPILER == CLAIRE_COMPILER_MSVC
+			CLAIRE_DISABLE_WARNING(4244)
+		#endif
+
 		return Radian(radians);
+
+		#if CLAIRE_COMPILER == CLAIRE_COMPILER_MSVC
+			CLAIRE_ENABLE_WARNING(4244)
+		#endif
 	}
 
 	CLAIRE_NAMESPACE_END

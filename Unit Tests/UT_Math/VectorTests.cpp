@@ -12,7 +12,7 @@ TEST(Vector, Vector2Instantiation)
 	math::Vector<2, real> a(1.0f, 2.0f);
 	//ASSERT_EQ(sizeof(real) * 2, sizeof(a));
 	ASSERT_EQ(1, a.x);
-	ASSERT_EQ(2, a.y);
+	ASSERT_EQ(2, a.y); 
 }
 
 TEST(Vector, Vector3Instantiation)

@@ -17,16 +17,7 @@ namespace Claire
 		: public VectorComponent<T, Size>
 	{
 	public:
-		//static size_t Size = Size;
-
-		Vector(T x, T y)
-			: VectorComponent<T, Size>(x, y) {}
-
-		Vector(T x, T y, T z)
-			: VectorComponent<T, Size>(x, y, z) {}
-
-		Vector(T x, T y, T z, T w)
-			: VectorComponent<T, Size>(x, y, z, w) {}
+		using VectorComponent::VectorComponent;
 
 		Vector(T f = (T)0)
 		{
@@ -38,7 +29,7 @@ namespace Claire
 			memcpy_s(mArr.data(), sizeof(mArr), vector.mArr.data(), Size * sizeof(T));
 		}
 
-		Vector(const std::array<T, Size> data)
+		Vector(const std::array<T, Size>& data)
 		{
 			mArr = data;
 		}

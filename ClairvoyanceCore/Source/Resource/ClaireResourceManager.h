@@ -15,8 +15,8 @@ namespace Claire
 		CLAIRE_MOVABLE_ONLY(ResourceManager)
 
 	public:
-		ResourceManager(void);
-		virtual ~ResourceManager(void);
+		ResourceManager(void) = default;
+		virtual ~ResourceManager(void) = default;
 
 		Resource* getResource(const string& name) const;
 

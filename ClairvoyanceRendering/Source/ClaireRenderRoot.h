@@ -23,8 +23,7 @@ namespace Claire
 
 	class Plugin;
 
-	class CLAIRE_RENDERING_EXPORT RenderRoot
-		//: public GeneralAllocatedObject
+	class CLAIRE_RENDERING_EXPORT RenderRoot CLAIRE_FINAL
 		: public IRenderWindowEventListener
 	{
 	public:

@@ -144,7 +144,15 @@ namespace Claire
 
 	inline Degree operator "" _deg(long double degrees)
 	{
+		#if CLAIRE_COMPILER == CLAIRE_COMPILER_MSVC
+			CLAIRE_DISABLE_WARNING(4244)
+		#endif
+
 		return Degree(degrees);
+
+		#if CLAIRE_COMPILER == CLAIRE_COMPILER_MSVC
+			CLAIRE_ENABLE_WARNING(4244)
+		#endif
 	}
 	
 	CLAIRE_NAMESPACE_END

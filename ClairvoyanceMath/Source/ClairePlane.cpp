@@ -4,10 +4,6 @@ namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(math)
 
-	Plane::Plane(void)
-	{
-	}
-
 	Plane::Plane(const Plane& rhs)
 		: normal(rhs.normal)
 		, d(rhs.d)

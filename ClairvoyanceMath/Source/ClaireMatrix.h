@@ -16,18 +16,7 @@ namespace Claire
 		: public MatrixComponent<T, Rows, Columns>
 	{
 	public:
-		Matrix(void)
-		{
-			std::fill(mArr.begin(), mArr.end(), (T)0);
-		}
-
-		Matrix(std::array<T, Size> args)
-			: MatrixComponent(args) {}
-
-		Matrix(const Matrix& matrix)
-		{
-			memcpy_s(mArr.data(), sizeof(mArr), matrix.mArr.data(), Size * sizeof(T));
-		}
+		using MatrixComponent::MatrixComponent;
 
 		static Matrix buildIdentity(void)
 		{
@@ -66,7 +55,7 @@ namespace Claire
 		inline Matrix operator - (void) const
 		{
 			Matrix m = *this;
-			for (int i = 0; i < Size; i++)
+			for(int i = 0; i < Size; i++)
 			{
 				m.mArr[i] = -m.mArr[i];
 			}
@@ -92,7 +81,7 @@ namespace Claire
 		inline Matrix operator - (const Matrix& matrix) const
 		{
 			Matrix m = *this;
-			for (size_t i = 0; i < Rows; i++)
+			for(size_t i = 0; i < Rows; i++)
 			{
 				(Vector<Columns, T>&)m[i] -= matrix[i];
 			}

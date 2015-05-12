@@ -9,12 +9,6 @@ namespace Claire
 		, mPath(path)
 		, mManager(manager)
 	{
-
-	}
-
-	Resource::~Resource(void)
-	{
-
 	}
 
 	void Resource::load(void)

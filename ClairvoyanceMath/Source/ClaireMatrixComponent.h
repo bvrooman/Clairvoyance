@@ -3,8 +3,6 @@
 
 #include "ClaireMathPrerequisites.h"
 
-#include <stdarg.h>
-
 #include "ClaireVector.h"
 
 namespace Claire
@@ -27,7 +25,16 @@ namespace Claire
 			std::array<Row, Rows> mArr2D;
 		};
 
-		MatrixComponent(void) = default;
+		MatrixComponent(void)
+		{
+			std::fill(mArr.begin(), mArr.end(), (T)0);
+		}
+
+		MatrixComponent(const MatrixComponent& matrix)
+		{
+			memcpy_s(mArr.data(), sizeof(mArr), matrix.mArr.data(), Size * sizeof(T));
+		}
+
 		MatrixComponent(std::array<T, Size> args)
 		{
 			mArr = args;

@@ -17,7 +17,7 @@ namespace Claire
 			const string& path,
 			ResourceManager* manager
 			);
-		virtual ~Resource(void);
+		virtual ~Resource(void) = default;
 
 		string getName(void) const { return mName; }
 		size_t getSize(void) const { return mSize; }

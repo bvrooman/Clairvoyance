@@ -32,7 +32,7 @@ namespace Claire
 	private:
 		VertexFormat mVertexFormat;
 		std::array<VertexBufferFormat*, MAX_VERTEX_BUFFERS> mVertexBufferFormats;
-		size_t mNumVertexBufferFormats;
+		size_t mNumVertexBufferFormats = 0;
 	};
 
 	CLAIRE_NAMESPACE_END

@@ -12,7 +12,7 @@ namespace Claire
 	class CLAIRE_MATH_EXPORT Plane
 	{
 	public:
-		Plane(void);
+		Plane(void) = default;
 		Plane(const Plane& rhs);
 		Plane(const Vector3& normal, real constant);
 		Plane(real a, real b, real c, real d);

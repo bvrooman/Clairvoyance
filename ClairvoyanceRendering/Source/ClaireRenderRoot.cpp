@@ -75,8 +75,6 @@ namespace Claire
 
 	void RenderRoot::update(void)
 	{
-		//mActiveRenderSystem->updateAllRenderTargets();
-		//mActiveRenderSystem->swapAllRenderTargetBuffers();
 		mActiveRenderSystem->update();
 	}
 
@@ -145,8 +143,7 @@ namespace Claire
 
 	RenderWindow* RenderRoot::createRenderWindow(const string& name, size_t width, size_t height, bool fullscreen)
 	{
-		RenderWindow* window;
-		window = mActiveRenderSystem->createRenderWindow(
+		RenderWindow* window = mActiveRenderSystem->createRenderWindow(
 			name,
 			width,
 			height,

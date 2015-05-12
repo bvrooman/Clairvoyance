@@ -3,8 +3,6 @@
 
 #include "ClaireMathPrerequisites.h"
 
-#include "Memory\ClaireMemoryConfig.h"
-
 namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(math)

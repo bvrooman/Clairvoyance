@@ -5,16 +5,6 @@ namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(core)
 
-	ResourceManager::ResourceManager(void)
-	{
-
-	}
-
-	ResourceManager::~ResourceManager(void)
-	{
-
-	}
-
 	Resource* ResourceManager::getResource(const string& name) const
 	{
 		return mManagerImpl.get(name);
