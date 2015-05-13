@@ -19,10 +19,6 @@ namespace Claire
 			);
 	}
 
-	RenderTarget::~RenderTarget(void)
-	{
-	}
-
 	void RenderTarget::update(void)
 	{
 		updateViewports();

@@ -10,14 +10,7 @@ namespace Claire
 	Entity::Entity(const string& name, Mesh* mesh)
 		: SceneObject(name)
 		, mMesh(mesh)
-		, mInitialized(false)
 	{
-
-	}
-
-	Entity::~Entity(void)
-	{
-
 	}
 
 	void Entity::initialize(void)

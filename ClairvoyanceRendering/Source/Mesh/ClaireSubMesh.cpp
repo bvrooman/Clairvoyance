@@ -15,11 +15,6 @@ namespace Claire
 		mIndexData = std::make_unique<IndexData>();
 	}
 
-	SubMesh::~SubMesh(void)
-	{
-
-	}
-
 	RenderObjectDescriptor SubMesh::getRenderObjectDescriptor(void) const
 	{
 		RenderObjectDescriptor operation(

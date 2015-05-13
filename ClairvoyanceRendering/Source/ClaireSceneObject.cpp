@@ -11,10 +11,6 @@ namespace Claire
 	{
 	}
 
-	SceneObject::~SceneObject(void)
-	{
-	}
-
 	void SceneObject::attachToSceneNode(SceneNode* sceneNode)
 	{
 		mParentSceneNode = sceneNode;

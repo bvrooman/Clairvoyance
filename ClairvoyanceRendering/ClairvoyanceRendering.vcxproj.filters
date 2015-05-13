@@ -126,9 +126,6 @@
     <ClInclude Include="Source\ClaireNameGenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\ClaireContiguousAllocator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Buffers\ClaireBufferObject.h">
       <Filter>Header Files\Buffers</Filter>
     </ClInclude>
@@ -251,9 +248,6 @@
     <ClCompile Include="Source\ClaireWindowRendererComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\ClairePlugin.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source\ClaireWindowEvents.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -289,9 +283,6 @@
     </ClCompile>
     <ClCompile Include="Source\Win32\ClaireWindowPlatformSupportWin32.cpp">
       <Filter>Source Files\Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\ClaireWindowRendererSupport.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\ClaireEntity.cpp">
       <Filter>Source Files</Filter>
@@ -331,9 +322,6 @@
     </ClCompile>
     <ClCompile Include="Source\ClaireEntityFactory.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Buffers\ClaireBufferObjectManager.cpp">
-      <Filter>Source Files\Buffers</Filter>
     </ClCompile>
     <ClCompile Include="Source\Buffers\ClaireVertexBufferFormat.cpp">
       <Filter>Source Files\Buffers</Filter>

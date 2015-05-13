@@ -21,8 +21,8 @@ namespace Claire
 		using PointerType = T*;
 
 	public:
-		LifetimePolicyOwning(void) {}
-		~LifetimePolicyOwning(void) {}
+		LifetimePolicyOwning(void) = default;
+		~LifetimePolicyOwning(void) = default;
 
 		PointerType get(const Key& key) const
 		{
@@ -102,6 +102,9 @@ namespace Claire
 		using PointerType = T*;
 
 	public:
+		LifetimePolicyNone(void) = default;
+		~LifetimePolicyNone(void) = default;
+
 		PointerType get(const Key& key) const
 		{
 			auto it = mMap.find(key);
@@ -181,8 +184,8 @@ namespace Claire
 		using PointerType = typename LifetimePolicy::PointerType;
 
 	public:
-		ManagerBase(void) {}
-		~ManagerBase(void) {}
+		ManagerBase(void) = default;
+		~ManagerBase(void) = default;
 
 		PointerType get(const Key& key) const
 		{

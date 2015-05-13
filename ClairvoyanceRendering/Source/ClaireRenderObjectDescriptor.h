@@ -33,17 +33,16 @@ namespace Claire
 			, mIndexData(indexData)
 			, mPrimitiveType(primitiveType)
 		{}
-		~RenderObjectDescriptor(void)
-		{}
+		~RenderObjectDescriptor(void) = default;
 
 		VertexData* getVertexData(void) const { return mVertexData; }
 		IndexData* getIndexData(void) const { return mIndexData; }
 		PrimitiveType getPrimitiveType(void) const { return mPrimitiveType; }
 
 	private:
-		VertexData* mVertexData;
-		IndexData* mIndexData;
-		PrimitiveType mPrimitiveType;
+		VertexData* mVertexData = nullptr;
+		IndexData* mIndexData = nullptr;
+		PrimitiveType mPrimitiveType = PT_POINT_LIST;
 	};
 
 	CLAIRE_NAMESPACE_END

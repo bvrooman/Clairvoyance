@@ -16,8 +16,8 @@ namespace Claire
 		//: public GeneralAllocatedObject
 	{
 	public:
-		WindowPlatformSupport(void) {}
-		virtual ~WindowPlatformSupport(void) {}
+		WindowPlatformSupport(void) = default;
+		virtual ~WindowPlatformSupport(void) = default;
 
 		virtual WindowPlatformComponentUPtr createWindowPlaformComponent(RenderWindow* parentRenderWindow) const CLAIRE_ABSTRACT;
 	};

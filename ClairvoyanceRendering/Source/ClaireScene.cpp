@@ -23,10 +23,6 @@ namespace Claire
 		mEntityFactory = std::make_unique<EntityFactory>(mManager->getMeshManager());
 	}
 
-	Scene::~Scene(void)
-	{
-	}
-
 	Camera* Scene::createCamera(const string& name)
 	{
 		return mCameraManagerImpl.create<Camera>(

@@ -27,7 +27,7 @@ namespace Claire
 			RenderSystem* renderSystem,
 			SceneManager* manager
 			);
-		virtual ~Scene(void);
+		virtual ~Scene(void) = default;
 
 		Camera* createCamera(const string& name);
 		void* destroyCamera(const string& name);
@@ -47,7 +47,7 @@ namespace Claire
 		SceneManager* mManager = nullptr;
 		string mName;
 
-		RenderSystem* mRenderSystem;
+		RenderSystem* mRenderSystem = nullptr;
 
 		typedef OwningManager<Camera, string> CameraManagerImpl;
 		CameraManagerImpl mCameraManagerImpl;

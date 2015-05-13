@@ -4,16 +4,6 @@ namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 
-	VertexData::VertexData(void)
-	{
-
-	}
-
-	VertexData::~VertexData(void)
-	{
-
-	}
-
 	VertexData::VertexBufferObjectHandle VertexData::addVertexBufferFormat(VertexBufferFormatUPtr format)
 	{
 		VertexBufferObjectHandle handle = mCurrentHandle;

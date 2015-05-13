@@ -26,10 +26,6 @@ namespace Claire
 		mRendererComponent = mRendererSupport->createWindowRendererComponent(this);
 	}
 
-	RenderWindow::~RenderWindow(void)
-	{
-	}
-
 	void RenderWindow::create(void)
 	{
 		mPlatformComponent->create();

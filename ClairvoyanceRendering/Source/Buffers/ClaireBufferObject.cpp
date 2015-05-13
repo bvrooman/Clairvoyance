@@ -8,12 +8,6 @@ namespace Claire
 		: mManager(manager)
 		, mUsageSettingsFlags(usageSettings)
 	{
-
-	}
-
-	BufferObject::~BufferObject(void)
-	{
-
 	}
 
 	void* BufferObject::lock(size_t offset, size_t length, EnumFlags lockSettings)

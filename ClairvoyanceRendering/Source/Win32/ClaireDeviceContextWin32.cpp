@@ -10,10 +10,5 @@ namespace Claire
 
 	}
 
-	DeviceContextWin32::~DeviceContextWin32(void)
-	{
-
-	}
-
 	CLAIRE_NAMESPACE_END
 }

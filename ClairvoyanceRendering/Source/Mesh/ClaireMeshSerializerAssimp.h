@@ -23,7 +23,7 @@ namespace Claire
 	{
 	public:
 		MeshSerializerAssimp(MeshManager* meshManager);
-		~MeshSerializerAssimp(void);
+		~MeshSerializerAssimp(void) = default;
 
 		void importMesh(const string& path, Mesh* dest) CLAIRE_OVERRIDE;
 

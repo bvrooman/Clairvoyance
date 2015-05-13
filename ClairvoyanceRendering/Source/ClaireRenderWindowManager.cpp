@@ -19,10 +19,6 @@ namespace Claire
 	{
 	}
 
-	RenderWindowManager::~RenderWindowManager(void)
-	{
-	}
-
 	RenderWindow* RenderWindowManager::createRenderWindow(const string& name, size_t width, size_t height, bool fullscreen)
 	{
 		auto window = std::make_unique<RenderWindow>(

@@ -7,12 +7,12 @@
 #include "ClaireColour.h"
 #include "Idiom\ClaireManager.h"
 #include "ClaireSTLContainers.h"
+#include "ClaireViewport.h"
 
 namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 
-	class Viewport;
 	class Camera;
 	
 	class CLAIRE_RENDERING_EXPORT RenderTarget
@@ -21,7 +21,7 @@ namespace Claire
 		CLAIRE_MOVABLE_ONLY(RenderTarget)
 
 		RenderTarget(string name, size_t width, size_t height);
-		virtual ~RenderTarget(void);
+		virtual ~RenderTarget(void) = default;
 
 		virtual void update(void);
 		virtual void swapBuffers(void) {}

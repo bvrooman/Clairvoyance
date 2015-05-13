@@ -11,9 +11,5 @@ namespace Claire
 	{
 	}
 
-	WindowRendererComponent::~WindowRendererComponent(void)
-	{
-	}
-
 	CLAIRE_NAMESPACE_END
 }

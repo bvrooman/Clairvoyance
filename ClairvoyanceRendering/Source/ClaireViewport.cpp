@@ -26,11 +26,6 @@ namespace Claire
 		updateDimensions();
 	}
 
-	Viewport::~Viewport(void)
-	{
-		
-	}
-
 	void Viewport::updateDimensions(void)
 	{
 		size_t width = mRenderTarget->getWidth();

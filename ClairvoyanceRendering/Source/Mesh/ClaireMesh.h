@@ -31,7 +31,7 @@ namespace Claire
 
 	public:
 		Mesh(const string& name, const string& path, ResourceManager* manager);
-		~Mesh(void);
+		~Mesh(void) = default;
 
 		SubMesh* createSubMesh(void);
 

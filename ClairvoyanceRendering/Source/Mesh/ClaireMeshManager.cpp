@@ -42,11 +42,6 @@ namespace Claire
 		bufferFormat.addVertexAttribute(textureCoord1);
 	}
 
-	MeshManager::~MeshManager(void)
-	{
-
-	}
-
 	Mesh* MeshManager::getMesh(const string& name) const
 	{
 		return (Mesh*)getResource(name);

@@ -24,7 +24,7 @@ namespace Claire
 
 	public:
 		SubMesh(Mesh* parentMesh);
-		~SubMesh(void);
+		~SubMesh(void) = default;
 
 		Mesh* getParentMesh(void) const { return mParentMesh; }
 
@@ -38,12 +38,12 @@ namespace Claire
 		AxisAlignedBoundingBox getAABB(void) const { return mAABB; }
 
 	private:
-		Mesh* mParentMesh;
+		Mesh* mParentMesh = nullptr;
 
 		RenderObjectDescriptor::PrimitiveType mPrimitiveType;
 
-		VertexDataUPtr mVertexData;
-		IndexDataUPtr mIndexData;
+		VertexDataUPtr mVertexData = nullptr;
+		IndexDataUPtr mIndexData = nullptr;
 
 		AxisAlignedBoundingBox mAABB;
 	};

@@ -22,11 +22,8 @@ namespace Claire
 		};
 
 	public:
-		AxisAlignedBoundingBox(void)
-			: mDefinition(UNDEFINED)
-		{
-			setExtents(Vector3::ZERO, Vector3::ZERO);
-		}
+		AxisAlignedBoundingBox(void) = default;
+		~AxisAlignedBoundingBox(void) = default;
 
 		AxisAlignedBoundingBox(const Vector3& min, const Vector3& max)
 			: mDefinition(FINITE)
@@ -171,9 +168,9 @@ namespace Claire
 		}
 
 	private:
-		Vector3 mMinimum;
-		Vector3 mMaximum;
-		Definition mDefinition;
+		Vector3 mMinimum = Vector3::ZERO;
+		Vector3 mMaximum = Vector3::ZERO;;
+		Definition mDefinition = UNDEFINED;
 	};
 		
 	CLAIRE_NAMESPACE_END

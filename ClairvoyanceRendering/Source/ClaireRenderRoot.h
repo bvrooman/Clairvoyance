@@ -27,8 +27,8 @@ namespace Claire
 		: public IRenderWindowEventListener
 	{
 	public:
-		RenderRoot(void);
-		~RenderRoot(void);
+		RenderRoot(void) = default;
+		~RenderRoot(void) = default;
 
 		void initialize(void);
 		void shutdown(void);

@@ -21,7 +21,8 @@ namespace Claire
 		static const size_t CHAIN_SIZE = MAX_NODE_CHAIN_SIZE;
 
 	public:
-		NodeChainTransformComponent(void);
+		NodeChainTransformComponent(void) = default;
+		~NodeChainTransformComponent(void) = default;
 
 		void addNode(Node* node) CLAIRE_OVERRIDE;
 		void update(NodeHandle handle, FlatNode node) CLAIRE_OVERRIDE;
@@ -30,8 +31,8 @@ namespace Claire
 		inline void calculateDerivedTransform(NodeHandle handle, FlatNode node);
 
 	private:
-		NodeHandle mDirtyNode;
-		bool mDirty;
+		NodeHandle mDirtyNode = CHAIN_SIZE;
+		bool mDirty = false;
 
 		std::array<Transform, CHAIN_SIZE> mLocalTransforms;
 		std::array<Transform, CHAIN_SIZE> mCachedLocalTransforms;

@@ -31,8 +31,8 @@ namespace Claire
 		typedef vector<VertexAttribute> VertexAttributeVector;
 
 	public:
-		VertexFormat(void);
-		~VertexFormat(void);
+		VertexFormat(void) = default;
+		~VertexFormat(void) = default;
 
 		/*
 		Include a vertex attribute in this format definition.

@@ -15,10 +15,6 @@ namespace Claire
 	{
 	}
 
-	VertexAttribute::~VertexAttribute(void)
-	{
-	}
-
 	ushort VertexAttribute::getTypeSize(void) const
 	{
 		switch(mType)

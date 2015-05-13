@@ -12,8 +12,8 @@ namespace Claire
 		//: public GeneralAllocatedObject
 	{
 	public:
-		DeviceContext(void) {}
-		virtual ~DeviceContext(void) {}
+		DeviceContext(void) = default;
+		virtual ~DeviceContext(void) = default;
 	};
 
 	typedef std::unique_ptr<DeviceContext> DeviceContextUPtr;

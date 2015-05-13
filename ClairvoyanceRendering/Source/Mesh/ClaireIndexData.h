@@ -12,8 +12,8 @@ namespace Claire
 	class CLAIRE_RENDERING_EXPORT IndexData
 	{
 	public:
-		IndexData(void) {}
-		~IndexData(void) {}
+		IndexData(void) = default;
+		~IndexData(void) = default;
 
 		void setIndexBufferObject(IndexBufferObject* ibo) { mIndexBufferObject = ibo; }
 		IndexBufferObject* getIndexBufferObject(void) const { return mIndexBufferObject; }

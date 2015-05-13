@@ -11,10 +11,6 @@ namespace Claire
 	{
 	}
 
-	WindowPlatformComponent::~WindowPlatformComponent(void)
-	{
-	}
-
 	bool WindowPlatformComponent::getFullscreen(void)
 	{
 		return mParentRenderWindow->getFullscreen();

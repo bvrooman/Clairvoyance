@@ -6,15 +6,6 @@ namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 
-	ViewFrustum::ViewFrustum(void)
-	{
-	}
-
-	ViewFrustum::~ViewFrustum(void)
-	{
-
-	}
-
 	void ViewFrustum::buildProjectionMatrix(void)
 	{
 		ViewFrustum::ProjectionParameters parameters = calculateProjectionParameters(

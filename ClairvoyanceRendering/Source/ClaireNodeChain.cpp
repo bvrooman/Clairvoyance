@@ -15,10 +15,6 @@ namespace Claire
 		mManualUpdatePassList.reserve(2);
 	}
 
-	NodeChain::~NodeChain(void)
-	{
-	}
-
 	void NodeChain::addNode(Node* node)
 	{
 		// Assign the node a handle

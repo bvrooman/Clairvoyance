@@ -14,7 +14,7 @@ namespace Claire
 	{
 	public:
 		MeshSerializer(IMeshSerializerAdapter* serializer);
-		~MeshSerializer(void);
+		~MeshSerializer(void) = default;
 
 		void importMesh(const string& path, Mesh* dest);
 

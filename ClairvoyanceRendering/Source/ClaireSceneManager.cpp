@@ -8,11 +8,6 @@ namespace Claire
 	SceneManager::SceneManager(MeshManager* meshManager)
 		: mMeshManager(meshManager)
 	{
-
-	}
-
-	SceneManager::~SceneManager(void)
-	{
 	}
 
 	Scene* SceneManager::createScene(const string& name)

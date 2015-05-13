@@ -15,7 +15,7 @@ namespace Claire
 	{
 	public:
 		WindowRendererComponent(RenderWindow* parentRenderWindow);
-		virtual ~WindowRendererComponent(void);
+		virtual ~WindowRendererComponent(void) = default;
 
 		RenderWindow* getParentRenderWindow(void) const { return mParentRenderWindow; }
 

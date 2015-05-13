@@ -19,13 +19,13 @@ namespace Claire
 
 	public:
 		EntityFactory(MeshManager* meshManager);
-		~EntityFactory(void);
+		~EntityFactory(void) = default;
 
 	private:
 		SceneObject* createSceneObject_(const string& name, const ParamMap* paramMap) CLAIRE_OVERRIDE;
 
 	private:
-		MeshManager* mMeshManager;
+		MeshManager* mMeshManager = nullptr;
 	};
 
 	CLAIRE_NAMESPACE_END

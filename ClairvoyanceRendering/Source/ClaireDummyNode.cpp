@@ -51,9 +51,6 @@ namespace Claire
 		: Node(nodeChain, transform)
 	{}
 
-	DummyNode::~DummyNode(void)
-	{}
-
 	NodeUPtr DummyNode::create_(
 		const string& name,
 		const Transform& transform

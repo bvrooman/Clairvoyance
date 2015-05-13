@@ -79,10 +79,6 @@ namespace Claire
 	{
 	}
 
-	SceneNode::~SceneNode(void)
-	{
-	}
-
 	SceneNode* SceneNode::createChild(
 		const string& name,
 		const Transform& transform

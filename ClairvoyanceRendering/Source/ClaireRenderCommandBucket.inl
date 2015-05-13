@@ -10,13 +10,6 @@ namespace Claire
 	}
 
 	template <typename T>
-	RenderCommandBucket<T>::~RenderCommandBucket(void)
-	{
-
-	}
-
-
-	template <typename T>
 	template <typename RenderCommand>
 	RenderCommand& RenderCommandBucket<T>::addCommand(Key key, size_t auxiliaryMemorySize)
 	{

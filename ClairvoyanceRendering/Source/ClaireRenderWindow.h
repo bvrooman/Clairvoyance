@@ -26,7 +26,7 @@ namespace Claire
 			string name, size_t width, size_t height, bool fullscreen,
 			RenderWindowManager* manager
 			);
-		~RenderWindow(void);
+		~RenderWindow(void) = default;
 
 		void create(void);
 

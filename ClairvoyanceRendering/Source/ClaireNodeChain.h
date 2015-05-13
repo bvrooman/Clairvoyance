@@ -37,7 +37,7 @@ namespace Claire
 
 	public:
 		NodeChain(Node* rootNode);
-		virtual ~NodeChain(void);
+		virtual ~NodeChain(void) = default;
 
 		inline void addNode(Node* node);
 		inline void setNodeParent(NodeHandle handle, NodeHandle parent);

@@ -16,8 +16,8 @@ namespace Claire
 		CLAIRE_MOVABLE_ONLY(BufferObjectManager)
 
 	public:
-		BufferObjectManager(void);
-		virtual ~BufferObjectManager(void);
+		BufferObjectManager(void) = default;
+		virtual ~BufferObjectManager(void) = default;
 
 		// Index Buffer Object
 		virtual BufferObject* createIndexBufferObject(IndexBufferObject::IndexType indexType, size_t numIndices, EnumFlags usageSettings) CLAIRE_ABSTRACT;

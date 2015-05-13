@@ -20,7 +20,7 @@ namespace Claire
 		DummyNode(
 			const Transform& transform = Transform()
 			);
-		~DummyNode(void);
+		~DummyNode(void) = default;
 
 	private:
 		DummyNode(

@@ -14,7 +14,7 @@ namespace Claire
 	{
 	public:
 		VertexBufferObject(BufferObjectManager* manager, size_t vertexSize, size_t numVertices, EnumFlags usageSettings);
-		virtual ~VertexBufferObject(void);
+		virtual ~VertexBufferObject(void) = default;
 
 		size_t getVertexSize(void) const { return mVertexSize; }
 		size_t getNumVertices(void) const { return mNumVertices; }

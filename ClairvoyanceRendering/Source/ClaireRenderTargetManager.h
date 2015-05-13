@@ -14,8 +14,8 @@ namespace Claire
 	class CLAIRE_RENDERING_EXPORT RenderTargetManager
 	{
 	public:
-		RenderTargetManager(void);
-		~RenderTargetManager(void);
+		RenderTargetManager(void) = default;
+		~RenderTargetManager(void) = default;
 
 		void attachRenderTarget(RenderTargetUPtr renderTarget);
 		RenderTargetUPtr detachRenderTarget(const string& name);

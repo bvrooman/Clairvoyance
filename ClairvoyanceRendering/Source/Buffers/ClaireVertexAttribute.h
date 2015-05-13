@@ -75,7 +75,7 @@ namespace Claire
 		VAT_UBYTE
 	};
 
-	class CLAIRE_RENDERING_EXPORT VertexAttribute
+	class CLAIRE_RENDERING_EXPORT VertexAttribute 
 	{
 	public:
 		VertexAttribute(
@@ -83,7 +83,7 @@ namespace Claire
 			VertexAttributeType type,
 			ushort count
 			);
-		~VertexAttribute(void);
+		~VertexAttribute(void) = default;
 
 		IndexedVertexAttributeSemantic getSemantic(void) const { return mSemantic; }
 		VertexAttributeType getType(void) const { return mType; }

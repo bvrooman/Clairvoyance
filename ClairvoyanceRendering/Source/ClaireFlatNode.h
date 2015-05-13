@@ -10,8 +10,7 @@ namespace Claire
 	class CLAIRE_RENDERING_EXPORT FlatNode
 	{
 	public:
-		FlatNode(void)
-		{}
+		FlatNode(void) = default;
 
 		NodeHandle parentHandle = 0;
 		size_t numChildren = 0;

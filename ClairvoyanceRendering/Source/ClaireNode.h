@@ -37,7 +37,7 @@ namespace Claire
 		Node(
 			const Transform& transform = Transform()
 			);
-		virtual ~Node(void);
+		virtual ~Node(void) = default;
 
 		// Read only get
 		Transform getTransform(void) const;

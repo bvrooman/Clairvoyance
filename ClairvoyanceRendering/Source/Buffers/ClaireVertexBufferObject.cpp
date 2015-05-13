@@ -12,9 +12,5 @@ namespace Claire
 		mBytes = mVertexSize * mNumVertices;
 	}
 
-	VertexBufferObject::~VertexBufferObject(void)
-	{
-	}
-
 	CLAIRE_NAMESPACE_END
 }

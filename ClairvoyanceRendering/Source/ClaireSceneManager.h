@@ -18,7 +18,7 @@ namespace Claire
 
 	public:
 		SceneManager(MeshManager* meshManager);
-		~SceneManager(void);
+		~SceneManager(void) = default;
 
 		Scene* createScene(const string& name);
 		void destroyScene(const string& name);

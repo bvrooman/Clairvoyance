@@ -13,11 +13,6 @@ namespace Claire
 
 	}
 
-	MeshSerializer::~MeshSerializer(void)
-	{
-
-	}
-
 	void MeshSerializer::importMesh(const string& path, Mesh* dest)
 	{
 		struct stat buffer;

@@ -19,10 +19,6 @@ namespace Claire
 	{	
 	}
 
-	RenderSystem::~RenderSystem(void)
-	{
-	}
-
 	void RenderSystem::initialize(void)
 	{
 		if(mInitialized)

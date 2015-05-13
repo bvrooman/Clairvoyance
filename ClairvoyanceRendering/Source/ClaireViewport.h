@@ -14,7 +14,6 @@ namespace Claire
 	class RenderTarget;
 
 	class CLAIRE_RENDERING_EXPORT Viewport
-		//: public GeneralAllocatedObject
 	{
 	public:
 		Viewport(
@@ -24,7 +23,7 @@ namespace Claire
 			Colour backgroundColour = Colour::Black,
 			real left = 0.0f, real top = 0.0f,
 			real width = 1.0f, real height = 1.0f); 
-		virtual ~Viewport();
+		virtual ~Viewport(void) = default;
 
 		virtual void update(void);
 
@@ -41,15 +40,22 @@ namespace Claire
 		void updateDimensions(void);
 
 	protected:
-		Camera* mCamera;
-		RenderTarget* mRenderTarget;
+		Camera* mCamera = nullptr;
+		RenderTarget* mRenderTarget = nullptr;
 
-		real mLeftPerc, mTopPerc, mWidthPerc, mHeightPerc;
-		int mLeftDim, mTopDim, mWidthDim, mHeightDim;
+		real mLeftPerc = 1.0f;
+		real mTopPerc = 1.0f; 
+		real mWidthPerc = 1.0f;
+		real mHeightPerc = 1.0f;
 
-		int mZIndex;
+		int mLeftDim = 0;
+		int mTopDim = 0;
+		int mWidthDim = 0;
+		int mHeightDim = 0;
 
-		Colour mBackgroundColour;
+		int mZIndex = 0;
+
+		Colour mBackgroundColour = Colour::Black;
 	};
 
 	CLAIRE_NAMESPACE_END

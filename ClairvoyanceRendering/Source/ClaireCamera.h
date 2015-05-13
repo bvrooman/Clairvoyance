@@ -23,7 +23,7 @@ namespace Claire
 
 	public:
 		Camera(const string& name, Scene* Scene);
-		~Camera(void);
+		~Camera(void) = default;
 
 		void renderScene(Viewport* viewport);
 
@@ -39,7 +39,7 @@ namespace Claire
 		void calculateLocalAABB(void) CLAIRE_OVERRIDE;
 		
 	private:
-		Scene* mScene;
+		Scene* mScene = nullptr;
 
 		ViewFrustum mViewFrustum;
 

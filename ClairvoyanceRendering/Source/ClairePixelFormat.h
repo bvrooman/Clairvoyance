@@ -13,7 +13,7 @@ namespace Claire
 	{
 	public:
 		PixelFormat(ushort red, ushort blue, ushort green, ushort alpha);
-		virtual ~PixelFormat(void);
+		virtual ~PixelFormat(void) = default;
 		
 		ushort getRedBits(void) const { return mRedBits; }
 		ushort getBlueBits(void) const { return mBlueBits; }

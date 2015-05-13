@@ -13,8 +13,8 @@ namespace Claire
 		: public WindowPlatformSupport
 	{
 	public:
-		WindowPlatformSupportWin32(void) {}
-		~WindowPlatformSupportWin32(void) {}
+		WindowPlatformSupportWin32(void) = default;
+		~WindowPlatformSupportWin32(void) = default;
 
 		WindowPlatformComponentUPtr createWindowPlaformComponent(RenderWindow* parentRenderWindow) const CLAIRE_OVERRIDE;
 	};

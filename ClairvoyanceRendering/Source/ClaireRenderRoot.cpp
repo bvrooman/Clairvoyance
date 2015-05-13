@@ -15,14 +15,6 @@ namespace Claire
 	Singleton<rendering::RenderRoot>::TypeUPtr Singleton<rendering::RenderRoot>::mInstance = 0;
 
 	CLAIRE_NAMESPACE_BEGIN(rendering)
-	
-	RenderRoot::RenderRoot(void)
-	{
-	}
-
-	RenderRoot::~RenderRoot(void)
-	{
-	}
 
 	void RenderRoot::initialize(void)
 	{

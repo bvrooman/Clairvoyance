@@ -21,7 +21,7 @@ namespace Claire
 			const WindowRendererSupport* rendererSupport,
 			RenderTargetManager* renderTargetManager
 			);
-		~RenderWindowManager(void);
+		~RenderWindowManager(void) = default;
 
 		RenderWindow* createRenderWindow(const string& name, size_t width, size_t height, bool fullscreen);
 		void destroyRenderWindow(const string& name);
@@ -29,9 +29,9 @@ namespace Claire
 		RenderWindow* getRenderWindow(const string& name) const;
 
 	private:
-		const WindowPlatformSupport* mPlatformSupport;
-		const WindowRendererSupport* mRendererSupport;
-		RenderTargetManager* mRenderTargetManager;
+		const WindowPlatformSupport* mPlatformSupport = nullptr;
+		const WindowRendererSupport* mRendererSupport = nullptr;
+		RenderTargetManager* mRenderTargetManager = nullptr;
 	};
 
 	CLAIRE_NAMESPACE_END

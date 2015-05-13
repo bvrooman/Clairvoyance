@@ -16,7 +16,7 @@ namespace Claire
 	{
 	public:
 		Entity(const string& name, Mesh* mesh);
-		~Entity(void);
+		~Entity(void) = default;
 
 		void initialize(void);
 
@@ -26,9 +26,9 @@ namespace Claire
 		void calculateLocalAABB(void) CLAIRE_OVERRIDE;
 
 	private:
-		Mesh* mMesh;
+		Mesh* mMesh = nullptr;
 
-		bool mInitialized;
+		bool mInitialized = false;
 	};
 
 	CLAIRE_NAMESPACE_END

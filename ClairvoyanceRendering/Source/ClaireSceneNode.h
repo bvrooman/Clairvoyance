@@ -25,7 +25,7 @@ namespace Claire
 		SceneNode(
 			const Transform& transform = Transform()
 			);
-		~SceneNode(void);
+		~SceneNode(void) = default;
 
 		SceneNode* createChild(
 			const string& name,

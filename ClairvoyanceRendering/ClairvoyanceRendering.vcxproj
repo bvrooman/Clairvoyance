@@ -195,7 +195,6 @@
     <ClInclude Include="Source\ClaireINodeChainComponent.h" />
     <ClInclude Include="Source\ClaireNameGenerator.h" />
     <ClInclude Include="Source\ClaireNode.h" />
-    <ClInclude Include="Source\ClaireContiguousAllocator.h" />
     <ClInclude Include="Source\ClaireNodeChain.h" />
     <ClInclude Include="Source\ClaireNodeChainTransformComponent.h" />
     <ClInclude Include="Source\ClaireNodeChainDummyComponent.h" />
@@ -251,7 +250,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Buffers\ClaireBufferObject.cpp" />
-    <ClCompile Include="Source\Buffers\ClaireBufferObjectManager.cpp" />
     <ClCompile Include="Source\Buffers\ClaireIndexBufferObject.cpp" />
     <ClCompile Include="Source\Buffers\ClaireVertexAttribute.cpp" />
     <ClCompile Include="Source\Buffers\ClaireVertexBufferFormat.cpp" />
@@ -266,12 +264,10 @@
     <ClCompile Include="Source\ClaireNodeChain.cpp" />
     <ClCompile Include="Source\ClaireNodeChainTransformComponent.cpp" />
     <ClCompile Include="Source\ClairePixelFormat.cpp" />
-    <ClCompile Include="Source\ClairePlugin.cpp" />
     <ClCompile Include="Source\ClaireRenderTargetManager.cpp" />
     <ClCompile Include="Source\ClaireRenderWindowManager.cpp" />
     <ClCompile Include="Source\ClaireSceneNodeChainAABBComponent.cpp" />
     <ClCompile Include="Source\ClaireSceneObjectFactory.cpp" />
-    <ClCompile Include="Source\ClaireWindowRendererSupport.cpp" />
     <ClCompile Include="Source\ClaireRenderRoot.cpp" />
     <ClCompile Include="Source\ClaireRenderSystem.cpp" />
     <ClCompile Include="Source\ClaireRenderTarget.cpp" />

@@ -12,8 +12,8 @@ namespace Claire
 	class CLAIRE_RENDERING_EXPORT Plugin
 	{
 	public:
-		Plugin(void);
-		virtual ~Plugin(void);
+		Plugin(void) = default;
+		virtual ~Plugin(void) = default;
 
 		virtual void install(RenderRoot* renderRoot) CLAIRE_ABSTRACT;
 		virtual void uninstall(RenderRoot* renderRoot) CLAIRE_ABSTRACT;

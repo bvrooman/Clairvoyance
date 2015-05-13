@@ -29,9 +29,5 @@ namespace Claire
 		mBytes = mIndexSize * mNumIndices;
 	}
 
-	IndexBufferObject::~IndexBufferObject(void)
-	{
-	}
-
 	CLAIRE_NAMESPACE_END
 }

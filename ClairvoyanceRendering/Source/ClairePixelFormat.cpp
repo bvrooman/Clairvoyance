@@ -12,9 +12,5 @@ namespace Claire
 	{
 	}
 
-	PixelFormat::~PixelFormat(void)
-	{
-	}
-
 	CLAIRE_NAMESPACE_END
 }

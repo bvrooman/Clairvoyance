@@ -63,10 +63,6 @@ namespace Claire
 		mTransformPass = mNodeChain->getManualUpdatePass(0);
 	}
 
-	Node::~Node(void)
-	{
-	}
-
 	Transform Node::getTransform(void) const
 	{
 		if(mTransform)

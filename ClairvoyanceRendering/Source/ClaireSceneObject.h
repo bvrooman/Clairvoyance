@@ -16,7 +16,7 @@ namespace Claire
 	{
 	public:
 		SceneObject(const string& name);
-		virtual ~SceneObject(void);
+		virtual ~SceneObject(void) = default;
 
 		string getName(void) const { return mName; }
 

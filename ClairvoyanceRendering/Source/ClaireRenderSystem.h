@@ -35,7 +35,7 @@ namespace Claire
 			const WindowPlatformSupport* windowPlatformSupport,
 			const WindowRendererSupport* windowRendererSupport
 			);
-		virtual ~RenderSystem(void);
+		virtual ~RenderSystem(void) = default;
 
 		virtual void initialize(void);
 
@@ -61,7 +61,7 @@ namespace Claire
 
 		bool mInitialized = false;
 
-		BufferObectManagerUPtr mBufferObjectManager;
+		BufferObectManagerUPtr mBufferObjectManager = nullptr;
 
 		RenderTargetManager mRenderTargetManager;
 		RenderWindowManager mRenderWindowManager;

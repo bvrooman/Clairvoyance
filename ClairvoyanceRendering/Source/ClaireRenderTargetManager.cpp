@@ -4,16 +4,6 @@ namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 
-	RenderTargetManager::RenderTargetManager(void)
-	{
-
-	}
-
-	RenderTargetManager::~RenderTargetManager(void)
-	{
-
-	}
-
 	void RenderTargetManager::attachRenderTarget(RenderTargetUPtr renderTarget)
 	{
 		mRenderTargetVector.push_back(renderTarget.get());

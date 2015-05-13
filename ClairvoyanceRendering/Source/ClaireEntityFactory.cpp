@@ -16,10 +16,6 @@ namespace Claire
 	{
 	}
 
-	EntityFactory::~EntityFactory(void)
-	{
-	}
-
 	SceneObject* EntityFactory::createSceneObject_(const string& name, const ParamMap* paramMap)
 	{
 		ParamMap::const_iterator it = paramMap->find(MESH_NAME_KEY);

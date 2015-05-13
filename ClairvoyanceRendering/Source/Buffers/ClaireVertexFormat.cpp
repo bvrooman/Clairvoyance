@@ -3,14 +3,6 @@
 namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(rendering)
-	
-	VertexFormat::VertexFormat(void)
-	{
-	}
-
-	VertexFormat::~VertexFormat(void)
-	{
-	}
 
 	const VertexAttribute* VertexFormat::getVertexAttributeFromSemantic(IndexedVertexAttributeSemantic semantic) const
 	{

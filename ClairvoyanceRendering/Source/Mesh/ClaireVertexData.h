@@ -28,8 +28,8 @@ namespace Claire
 		typedef list<VertexBufferObjectHandle> VBOHandleList;
 
 	public:
-		VertexData(void);
-		~VertexData(void);
+		VertexData(void) = default;
+		~VertexData(void) = default;
 
 		VertexBufferObjectHandle addVertexBufferFormat(VertexBufferFormatUPtr format);
 

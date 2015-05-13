@@ -12,7 +12,6 @@ namespace Claire
 	public:
 		NameGenerator(const string& prefix)
 			: mPrefix(prefix)
-			, mNext(1)
 		{}
 
 		string generate(void)
@@ -29,7 +28,7 @@ namespace Claire
 
 	private:
 		string mPrefix;
-		uint64_t mNext;
+		uint64_t mNext = 1;
 	};
 
 	CLAIRE_NAMESPACE_END

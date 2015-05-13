@@ -7,12 +7,6 @@ namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 
-	NodeChainTransformComponent::NodeChainTransformComponent(void)
-		: mDirtyNode(CHAIN_SIZE)
-		, mDirty(false)
-	{
-	}
-
 	void NodeChainTransformComponent::addNode(Node* node)
 	{
 		NodeHandle handle = node->mHandle;

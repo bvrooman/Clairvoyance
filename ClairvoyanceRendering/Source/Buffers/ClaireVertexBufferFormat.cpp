@@ -10,11 +10,6 @@ namespace Claire
 
 	}
 
-	VertexBufferFormat::~VertexBufferFormat(void)
-	{
-
-	}
-
 	void VertexBufferFormat::addVertexAttribute(VertexAttribute vertexAttribute)
 	{
 		mVertexAttributeVector.push_back(vertexAttribute);

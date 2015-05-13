@@ -16,7 +16,7 @@ namespace Claire
 
 	public:
 		RenderCommandBucket(size_t size);
-		~RenderCommandBucket(void);
+		~RenderCommandBucket(void) = default;
 
 		template <typename RenderCommand>
 		RenderCommand& addCommand(Key key, size_t auxiliaryMemorySize);

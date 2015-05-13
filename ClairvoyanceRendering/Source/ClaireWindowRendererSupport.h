@@ -20,8 +20,8 @@ namespace Claire
 		//: public GeneralAllocatedObject
 	{
 	public:
-		WindowRendererSupport(void);
-		virtual ~WindowRendererSupport(void);
+		WindowRendererSupport(void) = default;
+		virtual ~WindowRendererSupport(void) = default;
 
 		virtual void initialize(void) CLAIRE_ABSTRACT;
 

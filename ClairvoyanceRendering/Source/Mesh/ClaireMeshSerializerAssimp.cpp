@@ -20,11 +20,6 @@ namespace Claire
 		mBufferObjectManager = mMeshManager->getBufferObjectManager();
 	}
 
-	MeshSerializerAssimp::~MeshSerializerAssimp(void)
-	{
-
-	}
-
 	void MeshSerializerAssimp::importMesh(const string& path, Mesh* dest)
 	{
 		Assimp::Importer importer;

@@ -46,8 +46,8 @@ namespace Claire
 		};
 
 	public:
-		ViewFrustum(void);
-		~ViewFrustum(void);
+		ViewFrustum(void) = default;
+		~ViewFrustum(void) = default;
 
 		void setNearDistance(real nearDistance) { mNearDistance = nearDistance; }
 		void setFarDistance(real farDistance) { mFarDistance = farDistance; }

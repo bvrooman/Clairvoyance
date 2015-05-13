@@ -15,11 +15,6 @@ namespace Claire
 		mMeshManager = static_cast<MeshManager*>(mManager);
 	}
 
-	Mesh::~Mesh(void)
-	{
-
-	}
-
 	SubMesh* Mesh::createSubMesh(void)
 	{
 		auto subMesh = std::make_unique<SubMesh>(this);

@@ -17,7 +17,7 @@ namespace Claire
 	{
 	public:
 		DeviceContextWin32(HDC hdc);
-		~DeviceContextWin32(void);
+		~DeviceContextWin32(void) = default;
 
 		HDC getHDC(void) const { return mHDC; }
 

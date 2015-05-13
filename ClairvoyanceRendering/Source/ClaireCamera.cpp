@@ -20,10 +20,6 @@ namespace Claire
 		buildProjectionMatrix();
 	}
 
-	Camera::~Camera(void)
-	{
-	}
-
 	void Camera::renderScene(Viewport* viewport)
 	{
 		mScene->renderScene(this, viewport);

@@ -23,7 +23,7 @@ namespace Claire
 
 	public:
 		IndexBufferObject(BufferObjectManager* manager, IndexType indexType, size_t numIndices, EnumFlags usageSettings);
-		virtual ~IndexBufferObject(void);
+		virtual ~IndexBufferObject(void) = default;
 
 	protected:
 		IndexType mIndexType = IT_UNKNOWN;

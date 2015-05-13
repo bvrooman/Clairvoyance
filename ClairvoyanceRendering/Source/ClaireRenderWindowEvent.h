@@ -17,13 +17,12 @@ namespace Claire
 		RenderWindowEvent(RenderWindow* window)
 			: mRenderWindow(window)
 		{}
-		~RenderWindowEvent(void)
-		{}
+		~RenderWindowEvent(void) = default;
 
 		RenderWindow* getRenderWindow(void) const { return mRenderWindow; }
 
 	private:
-		RenderWindow* mRenderWindow;
+		RenderWindow* mRenderWindow = nullptr;
 	};
 
 	CLAIRE_NAMESPACE_END

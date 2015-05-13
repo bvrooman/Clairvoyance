@@ -3,12 +3,11 @@
 
 #include "ClairePrerequisites.h"
 #include "Idiom\ClaireManager.h"
+#include "ClaireResource.h"
 
 namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(core)
-
-	class Resource;
 
 	class CLAIRE_CORE_EXPORT ResourceManager
 	{

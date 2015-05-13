@@ -22,7 +22,7 @@ namespace Claire
 	{
 	public:
 		MeshManager(BufferObjectManager* bufferObjectManager);
-		~MeshManager(void);
+		~MeshManager(void) = default;
 
 		Mesh* getMesh(const string& name) const;
 

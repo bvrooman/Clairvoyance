@@ -27,7 +27,7 @@ namespace Claire
 
 	public:
 		VertexBufferFormat(SequenceType sequence);
-		~VertexBufferFormat(void);
+		~VertexBufferFormat(void) = default;
 
 		void addVertexAttribute(VertexAttribute attribute);
 		const VertexAttribute* getVertexAttributeFromSemantic(IndexedVertexAttributeSemantic semantic) const;

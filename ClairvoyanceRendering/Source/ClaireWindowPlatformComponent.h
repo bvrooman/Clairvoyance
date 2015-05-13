@@ -18,7 +18,7 @@ namespace Claire
 	{
 	public:
 		WindowPlatformComponent(RenderWindow* parentRenderWindow);
-		virtual ~WindowPlatformComponent(void);
+		virtual ~WindowPlatformComponent(void) = default;
 
 		RenderWindow* getParentRenderWindow(void) const { return mParentRenderWindow; }
 
@@ -45,7 +45,7 @@ namespace Claire
 
 		DeviceContextUPtr mDeviceContext = nullptr;
 
-		PixelFormatUPtr mPixelFormat;
+		PixelFormatUPtr mPixelFormat = nullptr;
 
 		size_t mLeft = 0;
 		size_t mTop = 0;

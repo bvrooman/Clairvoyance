@@ -19,8 +19,8 @@ namespace Claire
 		typedef map<string, string> ParamMap;
 
 	public:
-		SceneObjectFactory(void);
-		virtual ~SceneObjectFactory(void);
+		SceneObjectFactory(void) = default;
+		virtual ~SceneObjectFactory(void) = default;
 
 		SceneObject* createSceneObject(const string& name, const ParamMap* paramMap = 0);
 

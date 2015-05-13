@@ -44,7 +44,7 @@ namespace Claire
 
 	public:
 		BufferObject(BufferObjectManager* manager, EnumFlags usageSettings);
-		virtual ~BufferObject(void);
+		virtual ~BufferObject(void) = default;
 
 		// Lock a part of the buffer
 		void* lock(size_t offset, size_t length, EnumFlags lockSettings);
