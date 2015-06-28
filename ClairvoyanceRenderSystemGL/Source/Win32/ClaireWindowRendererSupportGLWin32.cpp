@@ -12,10 +12,6 @@ namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 
-	WindowRendererSupportGLWin32::WindowRendererSupportGLWin32(void)
-	{
-	}
-
 	WindowRendererSupportGLWin32::~WindowRendererSupportGLWin32(void)
 	{
 		// Clean up

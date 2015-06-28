@@ -24,5 +24,8 @@
     <ClCompile Include="ThreadIDTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MultipleInstanceThreadLocalStorageTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -10,23 +10,30 @@ namespace Claire
 	NameGenerator SceneNode::sNameGenerator("UnnamedSceneNode");
 
 	SceneNode::SceneNode(
-		const string& name,
-		const Transform& transform
+		const string& name
 		)
-		: Node(name, transform)
+		: SceneNode(
+			name,
+			Transform()
+			)
 	{
-		setup();
 	}
 
 	SceneNode::SceneNode(
 		const Transform& transform
 		)
-		: Node(transform)
+		: SceneNode(
+			generateName(),
+			transform
+			)
 	{
-		setup();
 	}
 
-	void SceneNode::setup(void)
+	SceneNode::SceneNode(
+		const string& name,
+		const Transform& transform
+		)
+		: Node(name, transform)
 	{
 		INodeChainComponent* aabbComp = mNodeChain->createComponent<SceneNodeChainAABBComponent>();
 
@@ -62,23 +69,6 @@ namespace Claire
 		}
 	}
 
-	SceneNode::SceneNode(
-		NodeChainSPtr nodeChain,
-		const string& name,
-		const Transform& transform
-		)
-		: Node(nodeChain, name, transform)
-	{
-	}
-
-	SceneNode::SceneNode(
-		NodeChainSPtr nodeChain,
-		const Transform& transform
-		)
-		: Node(nodeChain, transform)
-	{
-	}
-
 	SceneNode* SceneNode::createChild(
 		const string& name,
 		const Transform& transform
@@ -93,7 +83,7 @@ namespace Claire
 		)
 	{
 		return createChild(
-			sNameGenerator.generate(),
+			generateName(),
 			transform
 			);
 	}

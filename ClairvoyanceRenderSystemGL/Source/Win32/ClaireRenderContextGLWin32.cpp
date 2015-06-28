@@ -1,7 +1,7 @@
 #include "ClaireRenderContextGLWin32.h"
 #include "Win32\ClaireDeviceContextWin32.h"
 
-#include "Threading\ClaireThreadSpecificPtr.h"
+#include "Threading\ClaireThreadLocalPtr.h"
 
 namespace Claire
 {
@@ -14,10 +14,6 @@ namespace Claire
 
 		// first, get context from hdc?
 		mGLRC = wglCreateContext(hdc);
-	}
-
-	RenderContextGLWin32::~RenderContextGLWin32(void)
-	{
 	}
 
 	bool RenderContextGLWin32::makeCurrent(void)
@@ -46,7 +42,7 @@ namespace Claire
 
 	WGLEWContext* wglewGetContext(void)
 	{
-		static core::ThreadSpecificPtr<WGLEWContext> sWGLEWContext;
+		static core::ThreadLocalPtr<WGLEWContext> sWGLEWContext;
 
 		if(sWGLEWContext.get() == nullptr)
 		{

@@ -1,5 +1,5 @@
-#ifndef CLAIRE_THREAD_SPECIFIC_PTR_H
-#define CLAIRE_THREAD_SPECIFIC_PTR_H
+#ifndef CLAIRE_THREAD_LOCAL_PTR_H
+#define CLAIRE_THREAD_LOCAL_PTR_H
 
 #include "ClairePrerequisites.h"
 
@@ -15,7 +15,7 @@ namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(core)
 
-	template<typename T> using ThreadSpecificPtr = threading_internal::ThreadSpecificPtrImpl<T>;
+	template <typename T> using ThreadLocalPtr = threading_internal::ThreadLocalPtrImpl<T>;
 
 	CLAIRE_NAMESPACE_END
 }

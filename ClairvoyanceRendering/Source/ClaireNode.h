@@ -4,11 +4,7 @@
 #include "ClaireRenderingPrerequisites.h"
 
 #include "ClaireNodeChain.h"
-
-#include "ClaireQuaternion.h"
-#include "ClaireVector.h"
 #include "ClaireTransform.h"
-#include "ClaireNameGenerator.h"
 #include "Idiom\ClaireManager.h"
 
 namespace Claire
@@ -30,13 +26,7 @@ namespace Claire
 		typedef vector<Node*> NodeVector;
 
 	public:
-		Node(
-			const string& name,
-			const Transform& transform = Transform()
-			);
-		Node(
-			const Transform& transform = Transform()
-			);
+		Node(void) = default;
 		virtual ~Node(void) = default;
 
 		// Read only get
@@ -73,24 +63,27 @@ namespace Claire
 	protected:
 		virtual void update_(void) {}
 
-		Node(
-			NodeChainSPtr nodeChain,
-			const string& name,
-			const Transform& transform = Transform()
-			);
-		Node(
-			NodeChainSPtr nodeChain,
-			const Transform& transform = Transform()
-			);
-
 		virtual NodeUPtr create_(
 			const string& name,
 			const Transform& transform
 			) CLAIRE_ABSTRACT;
 
-	private:
-		void setup(void);
+		virtual string generateName(void) CLAIRE_ABSTRACT;
 
+		// Delegate ctor for root nodes
+		Node(
+			const string& name,
+			const Transform& transform
+			);
+
+		// Delegate ctor for child nodes
+		Node(
+			NodeChainSPtr nodeChain,
+			const string& name,
+			const Transform& transform
+			);
+
+	private:
 		size_t getTreeSize_(size_t count) const;
 
 		void createNodeChain(void);
@@ -132,8 +125,6 @@ namespace Claire
 		// Additional pass for updating the transform component
 		// individually
 		NodeChain::UpdatePass* mTransformPass;
-
-		static NameGenerator sNameGenerator;
 	};
 
 	typedef Node::NodeUPtr NodeUPtr;

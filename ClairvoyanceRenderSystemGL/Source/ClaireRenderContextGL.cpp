@@ -1,6 +1,6 @@
 #include "ClaireRenderContextGL.h"
 
-#include "Threading\ClaireThreadSpecificPtr.h"
+#include "Threading\ClaireThreadLocalPtr.h"
 
 namespace Claire
 {
@@ -11,13 +11,9 @@ namespace Claire
 	{
 	}
 
-	RenderContextGL::~RenderContextGL(void)
-	{
-	}
-
 	GLEWContext* glewGetContext(void)
 	{
-		static core::ThreadSpecificPtr<GLEWContext> sGLEWContext;
+		static core::ThreadLocalPtr<GLEWContext> sGLEWContext;
 
 		if(sGLEWContext.get() == nullptr)
 		{

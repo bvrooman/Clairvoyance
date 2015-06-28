@@ -7,7 +7,7 @@
 #include "Memory\Pools\ClaireStandardMemoryPool.h"
 #include "Memory\Pools\ClaireMemoryPoolManager.h"
 
-#include "Threading\ClaireThreadSpecificPtr.h"
+#include "Threading\ClaireThreadLocalPtr.h"
 
 #include "Memory\ClaireHeapArea.h"
 
@@ -46,13 +46,13 @@ namespace Claire
 		static const bool ALLOCATED_OBJECT_COMPATIBLE = true;
 
 	private:
-		static ThreadSpecificPtr<MemoryPool> sMemoryPool;
+		static ThreadLocalPtr<MemoryPool> sMemoryPool;
 
 		static const string POLICY_NAME;
 	};
 
 	template<typename TPool>
-	ThreadSpecificPtr<MemoryPool> MemoryAllocationPolicyPool<TPool>::sMemoryPool;
+	ThreadLocalPtr<MemoryPool> MemoryAllocationPolicyPool<TPool>::sMemoryPool;
 
 	template<typename TPool>
 	const string MemoryAllocationPolicyPool<TPool>::POLICY_NAME = "MemoryAllocationPolicyPool";

@@ -67,6 +67,8 @@
     <ClInclude Include="Source\Resource\ClaireResourceManager.h" />
     <ClInclude Include="Source\Threading\Boost\ClaireThreadingIncludesBoost.h" />
     <ClInclude Include="Source\Threading\Boost\ClaireThreadingTypesBoost.h" />
+    <ClInclude Include="Source\Threading\ClaireMultipleInstanceTLS.h" />
+    <ClInclude Include="Source\Threading\ClaireMultipleInstanceTLSRepository.h" />
     <ClInclude Include="Source\Threading\ClaireMutex.h" />
     <ClInclude Include="Source\Threading\ClaireRecursiveMutex.h" />
     <ClInclude Include="Source\Threading\ClaireScopedLock.h" />
@@ -74,11 +76,11 @@
     <ClInclude Include="Source\Threading\ClaireThreadingIncludes.h" />
     <ClInclude Include="Source\Threading\ClaireThreadingPlatform.h" />
     <ClInclude Include="Source\Threading\ClaireThreadingTypes.h" />
-    <ClInclude Include="Source\Threading\ClaireThreadSpecificPtr.h" />
+    <ClInclude Include="Source\Threading\ClaireThreadLocalPtr.h" />
     <ClInclude Include="Source\Threading\STD\ClaireThreadingIncludesSTD.h" />
     <ClInclude Include="Source\Threading\STD\ClaireThreadingTypesSTD.h" />
     <ClInclude Include="Source\Threading\ClaireThreadGroup.h" />
-    <ClInclude Include="Source\Threading\STD\ClaireThreadSpecificPtrSTD.h" />
+    <ClInclude Include="Source\Threading\STD\ClaireThreadLocalPtrSTD.h" />
     <ClInclude Include="Source\Threading\Win32\ClaireThreadDetails.h" />
     <ClInclude Include="Source\Threading\Win32\ClaireThreadPrimitives.h" />
   </ItemGroup>

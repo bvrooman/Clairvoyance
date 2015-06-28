@@ -16,8 +16,8 @@ namespace Claire
 		: public WindowRendererSupport
 	{
 	public:
-		WindowRendererSupportGL(void);
-		virtual ~WindowRendererSupportGL(void);
+		WindowRendererSupportGL(void) = default;
+		virtual ~WindowRendererSupportGL(void) = default;
 	};
 
 	CLAIRE_NAMESPACE_END

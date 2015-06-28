@@ -15,8 +15,8 @@ namespace Claire
 		: public WindowRendererComponent
 	{
 	public:
-		WindowRendererComponentGL(RenderWindow* parentRenderWindow);
-		virtual ~WindowRendererComponentGL(void);
+		using WindowRendererComponent::WindowRendererComponent;
+		virtual ~WindowRendererComponentGL(void) = default;
 
 		void create(void) CLAIRE_OVERRIDE;
 

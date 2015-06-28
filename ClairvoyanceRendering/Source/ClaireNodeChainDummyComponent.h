@@ -17,7 +17,7 @@ namespace Claire
 		static const size_t CHAIN_SIZE = MAX_NODE_CHAIN_SIZE;
 
 	public:
-		NodeChainDummyComponent(void) {}
+		NodeChainDummyComponent(void) = default;
 
 		void addNode(Node* node) CLAIRE_OVERRIDE
 		{

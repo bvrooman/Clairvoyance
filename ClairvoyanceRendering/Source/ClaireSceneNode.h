@@ -7,6 +7,7 @@
 
 #include "ClaireAxisAlignedBoundingBox.h"
 #include "ClaireNodeChain.h"
+#include "ClaireNameGenerator.h"
 
 namespace Claire
 {
@@ -19,11 +20,14 @@ namespace Claire
 	{
 	public:
 		SceneNode(
-			const string& name,
-			const Transform& transform = Transform()
+			const string& name
 			);
 		SceneNode(
 			const Transform& transform = Transform()
+			);
+		SceneNode(
+			const string& name,
+			const Transform& transform
 			);
 		~SceneNode(void) = default;
 
@@ -43,26 +47,22 @@ namespace Claire
 		void setWorldAABBReference(AxisAlignedBoundingBox* aabb);
 
 	private:
-		void setup(void);
-
-		void update_(void) CLAIRE_OVERRIDE;
+		// Inherit Node ctors
+		using Node::Node;
 
 		void updateSceneObjectAABB(void);
 
-		SceneNode(
-			NodeChainSPtr nodeChain,
-			const string& name,
-			const Transform& transform = Transform()
-			);
-		SceneNode(
-			NodeChainSPtr nodeChain,
-			const Transform& transform = Transform()
-			);
+		void update_(void) CLAIRE_OVERRIDE;
 
 		NodeUPtr create_(
 			const string& name,
 			const Transform& transform
 			) CLAIRE_OVERRIDE;
+
+		string generateName(void) CLAIRE_OVERRIDE
+		{
+			return sNameGenerator.generate();
+		}
 
 	private:
 		typedef map<string, SceneObject*> SceneObjectMap;
@@ -71,6 +71,7 @@ namespace Claire
 		AxisAlignedBoundingBox* mSceneObjectAABBReference = nullptr;
 		AxisAlignedBoundingBox* mWorldAABBReference = nullptr;
 
+	private:
 		static NameGenerator sNameGenerator;
 	};
 		

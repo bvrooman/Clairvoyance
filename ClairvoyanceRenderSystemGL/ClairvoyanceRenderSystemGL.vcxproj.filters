@@ -86,9 +86,6 @@
     <ClCompile Include="Source\ClaireWindowRendererComponentGLWin32.cpp">
       <Filter>Source Files\Win32</Filter>
     </ClCompile>
-    <ClCompile Include="Source\ClaireWindowRendererSupportGL.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Win32\ClaireWindowRendererSupportGLWin32.cpp">
       <Filter>Source Files\Win32</Filter>
     </ClCompile>

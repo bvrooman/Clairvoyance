@@ -228,7 +228,6 @@
     <ClCompile Include="Source\Buffers\ClaireIndexBufferObjectGL.cpp" />
     <ClCompile Include="Source\Buffers\ClaireVertexBufferObjectGL.cpp" />
     <ClCompile Include="Source\ClaireRenderContextGL.cpp" />
-    <ClCompile Include="Source\ClaireWindowRendererSupportGL.cpp" />
     <ClCompile Include="Source\ClaireRenderSystemGL.cpp" />
     <ClCompile Include="Source\ClaireWindowRendererComponentGL.cpp" />
     <ClCompile Include="Source\ClaireWindowRendererComponentGLWin32.cpp" />

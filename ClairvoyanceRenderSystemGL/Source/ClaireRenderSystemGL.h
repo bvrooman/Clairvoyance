@@ -16,7 +16,7 @@ namespace Claire
 		RenderSystemGL(
 			WindowPlatformSupport* windowPlatformSupport,
 			WindowRendererSupport* windowRendererSupport);
-		~RenderSystemGL(void);
+		~RenderSystemGL(void) = default;
 
 		void startup(void) CLAIRE_OVERRIDE;
 

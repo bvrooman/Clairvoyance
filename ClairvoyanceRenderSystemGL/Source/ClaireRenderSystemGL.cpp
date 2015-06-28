@@ -22,10 +22,6 @@ namespace Claire
 		mBufferObjectManager = std::make_unique<BufferObjectManagerGL>();
 	}
 
-	RenderSystemGL::~RenderSystemGL(void)
-	{
-	}
-
 	void RenderSystemGL::startup(void)
 	{
 		

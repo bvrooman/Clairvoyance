@@ -20,7 +20,7 @@
 
 #include "ClaireMemoryArena.h"
 #include "ClaireHeapArea.h"
-#include "Threading\ClaireThreadSpecificPtr.h"
+#include "Threading\ClaireThreadLocalPtr.h"
 
 #include "Idiom\ClaireDummy.h"
 

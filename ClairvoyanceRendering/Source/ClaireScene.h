@@ -30,7 +30,7 @@ namespace Claire
 		virtual ~Scene(void) = default;
 
 		Camera* createCamera(const string& name);
-		void* destroyCamera(const string& name);
+		void destroyCamera(const string& name);
 		void attachCamera(CameraUPtr camera);
 		CameraUPtr detachCamera(const string& name);
 

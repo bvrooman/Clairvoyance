@@ -17,9 +17,10 @@ namespace Claire
 		{
 			MemoryPool* pool = new MemoryPoolType(
 				start,
-				end);
+				end
+				);
 
-			sMemoryPool.reset(pool);
+			sMemoryPool = pool;
 
 			std::stringstream ss;
 			ss << POLICY_NAME << this_thread::getID();

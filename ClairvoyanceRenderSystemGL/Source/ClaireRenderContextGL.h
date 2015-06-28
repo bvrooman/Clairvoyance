@@ -13,7 +13,7 @@ namespace Claire
 	{
 	public:
 		RenderContextGL(const DeviceContext* deviceContext);
-		virtual ~RenderContextGL(void);
+		virtual ~RenderContextGL(void) = default;
 
 		virtual bool makeCurrent(void) CLAIRE_ABSTRACT;
 		virtual bool endCurrent(void) CLAIRE_ABSTRACT;

@@ -204,9 +204,6 @@
     <ClInclude Include="Source\Memory\Thread Policies\ClaireMemoryThreadPolicySingle.h">
       <Filter>Header Files\Memory\Thread Policies</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Threading\ClaireThreadSpecificPtr.h">
-      <Filter>Header Files\Threading</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Threading\ClaireThreadingPlatform.h">
       <Filter>Header Files\Threading</Filter>
     </ClInclude>
@@ -233,9 +230,6 @@
     </ClInclude>
     <ClInclude Include="Source\Idiom\ClaireSingleton.h">
       <Filter>Header Files\Idiom</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Threading\STD\ClaireThreadSpecificPtrSTD.h">
-      <Filter>Header Files\Threading\STD</Filter>
     </ClInclude>
     <ClInclude Include="Source\Compiler\ClaireClassMacros.h">
       <Filter>Header Files\Compiler</Filter>
@@ -278,6 +272,18 @@
     </ClInclude>
     <ClInclude Include="ClaireRange.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\ClaireMultipleInstanceTLSRepository.h">
+      <Filter>Header Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\ClaireMultipleInstanceTLS.h">
+      <Filter>Header Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\ClaireThreadLocalPtr.h">
+      <Filter>Header Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Threading\STD\ClaireThreadLocalPtrSTD.h">
+      <Filter>Header Files\Threading\STD</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -14,7 +14,7 @@ namespace Claire
 	{
 	public:
 		RenderContextGLWin32(const DeviceContext* deviceContext);
-		~RenderContextGLWin32(void);
+		~RenderContextGLWin32(void) = default;
 
 		bool makeCurrent(void) CLAIRE_OVERRIDE;
 		bool endCurrent(void) CLAIRE_OVERRIDE;

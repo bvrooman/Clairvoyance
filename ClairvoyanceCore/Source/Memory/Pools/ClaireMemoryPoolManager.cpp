@@ -11,14 +11,6 @@ namespace Claire
 
 	Singleton<MemoryPoolManager>::TypeUPtr Singleton<MemoryPoolManager>::mInstance;
 
-	MemoryPoolManager::MemoryPoolManager(void)
-	{
-	}
-
-	MemoryPoolManager::~MemoryPoolManager(void)
-	{
-	}
-
 	void MemoryPoolManager::addMemoryPool(const string& name, MemoryPool* pool)
 	{
 		mManagerImpl.attach(name, pool);

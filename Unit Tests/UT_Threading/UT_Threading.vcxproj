@@ -152,6 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MultipleInstanceThreadLocalStorageTests.cpp" />
     <ClCompile Include="ThreadIDTests.cpp" />
     <ClCompile Include="ThreadLocalStorageTests.cpp" />
     <ClCompile Include="ThreadTests.cpp" />

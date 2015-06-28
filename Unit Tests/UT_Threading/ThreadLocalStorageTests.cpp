@@ -4,7 +4,7 @@
 #include "Threading\ClaireThread.h"
 #include "Threading\ClaireMutex.h"
 #include "Threading\ClaireScopedLock.h"
-#include "Threading\ClaireThreadSpecificPtr.h"
+#include "Threading\ClaireThreadLocalPtr.h"
 
 #include <algorithm>
 
@@ -22,7 +22,7 @@ public:
 	{
 		ScopedLock<Mutex> l(mutex);
 		IntMap::iterator it = sIntMap.find(name);
-		if (it == sIntMap.end())
+		if(it == sIntMap.end())
 		{
 			sIntMap.insert(IntMap::value_type(name, i));
 		}
@@ -34,26 +34,35 @@ Mutex ObjectManager::mutex;
 class TLSObject
 {
 public:
-	static ThreadSpecificPtr<int> tlsID;
+	static ThreadLocalPtr<int> tlsID;
 
 	TLSObject(void)
 	{
 		std::cout << "CALL TO CREATE TLS OBJECT\n";
 
-		if (tlsID.get() == nullptr)
+		if(tlsID.get() == nullptr)
 		{
-			std::cout << "Reseting TLS ID...\n";
-			int* i = new int(ObjectManager::sIntMap.size());
-			tlsID.reset(i);
+			std::cout << "Setting TLS ID...\n";
+			tlsID = new int(ObjectManager::sIntMap.size());
 
 			std::stringstream ss;
 			ss << "TLS_" << this_thread::getID();
 			string name = ss.str();
-			ObjectManager::addInt(name, *i);
+			ObjectManager::addInt(name, *tlsID);
 		}
 	}
 };
-ThreadSpecificPtr<int> TLSObject::tlsID;
+ThreadLocalPtr<int> TLSObject::tlsID;
+
+TEST(ThreadLocalStoragePtr, UnaryOperator)
+{
+	ThreadLocalPtr<unsigned int> i = new unsigned int(1);
+	*i = 10;
+
+	unsigned int b = *i;
+
+	ASSERT_EQ(10, b);
+}
 
 void JustAThread(void)
 {
@@ -61,7 +70,7 @@ void JustAThread(void)
 	TLSObject* o2 = new TLSObject();
 }
 
-TEST(ThreadLocalStorage, ThreadSpecificPtrCount)
+TEST(ThreadLocalStorage, ThreadLocalPtrCount)
 {
 	// Create multiple objects in this thread
 	// Only 1 ID should be added to the list
@@ -83,11 +92,10 @@ TEST(ThreadLocalStorage, ThreadSpecificPtrCount)
 
 	typedef map<string, int> IntMap;
 	IntMap map = ObjectManager::sIntMap;
-	std::for_each(map.begin(), map.end(), [](IntMap::value_type t)
+	for(auto&& t : map)
 	{
 		std::cout << t.first << " : " << t.second << "\n";
 	}
-	);
 
 	ASSERT_EQ(3, map.size());
 }

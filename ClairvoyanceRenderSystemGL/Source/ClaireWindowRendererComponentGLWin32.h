@@ -13,10 +13,8 @@ namespace Claire
 		: public WindowRendererComponentGL
 	{
 	public:
-		WindowRendererComponentGLWin32(RenderWindow* parentRenderWindow);
-		~WindowRendererComponentGLWin32(void);
-
-		void destroy(void) CLAIRE_OVERRIDE;
+		using WindowRendererComponentGL::WindowRendererComponentGL;
+		~WindowRendererComponentGLWin32(void) = default;
 
 	protected:
 		void createRenderContext(void) CLAIRE_OVERRIDE;

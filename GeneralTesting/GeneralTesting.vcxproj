@@ -66,6 +66,10 @@
   <ItemGroup>
     <ClCompile Include="Testing.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TestThreadClass.h" />
+    <ClInclude Include="TSPtr.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

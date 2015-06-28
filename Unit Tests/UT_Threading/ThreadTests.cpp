@@ -5,7 +5,7 @@
 #include "Threading\ClaireThread.h"
 #include "Threading\ClaireThreadGroup.h"
 #include "Threading\ClaireScopedLock.h"
-#include "Threading\ClaireThreadSpecificPtr.h"
+#include "Threading\ClaireThreadLocalPtr.h"
 
 #include <chrono>
 

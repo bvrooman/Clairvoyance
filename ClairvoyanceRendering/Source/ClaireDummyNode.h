@@ -5,6 +5,8 @@
 
 #include "ClaireNode.h"
 
+#include "ClaireNameGenerator.h"
+
 namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(rendering)
@@ -14,31 +16,33 @@ namespace Claire
 	{
 	public:
 		DummyNode(
-			const string& name,
-			const Transform& transform = Transform()
+			const string& name
 			);
 		DummyNode(
 			const Transform& transform = Transform()
+			);
+		DummyNode(
+			const string& name,
+			const Transform& transform
 			);
 		~DummyNode(void) = default;
 
 	private:
-		DummyNode(
-			NodeChainSPtr nodeChain,
-			const string& name,
-			const Transform& transform = Transform()
-			);
-		DummyNode(
-			NodeChainSPtr nodeChain,
-			const Transform& transform = Transform()
-			);
-
+		// Inherit Node ctors
+		using Node::Node;
+		
 		NodeUPtr create_(
 			const string& name,
 			const Transform& transform
 			) CLAIRE_OVERRIDE;
 
-		void setup(void);
+		string generateName(void) CLAIRE_OVERRIDE
+		{
+			return sNameGenerator.generate();
+		}
+
+	private:
+		static NameGenerator sNameGenerator;
 	};
 
 	CLAIRE_NAMESPACE_END

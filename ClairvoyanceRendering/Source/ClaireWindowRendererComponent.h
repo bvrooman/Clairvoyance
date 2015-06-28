@@ -20,7 +20,6 @@ namespace Claire
 		RenderWindow* getParentRenderWindow(void) const { return mParentRenderWindow; }
 
 		virtual void create(void) CLAIRE_ABSTRACT;
-		virtual void destroy(void) CLAIRE_ABSTRACT;
 
 	protected:
 		RenderWindow* mParentRenderWindow;

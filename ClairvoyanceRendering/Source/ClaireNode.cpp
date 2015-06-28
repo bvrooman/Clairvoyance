@@ -6,31 +6,16 @@ namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 
-	NameGenerator Node::sNameGenerator("UnnamedNode");
-
 	Node::Node(
 		const string& name,
 		const Transform& transform
 		)
 		: mName(name)
 		, mInitialTransform(transform)
+
 	{
 		createNodeChain();
-		setup();
-	}
 
-	Node::Node(
-		const Transform& transform
-		)
-		: mInitialTransform(transform)
-	{
-		mName = sNameGenerator.generate();
-		createNodeChain();
-		setup();
-	}
-
-	void Node::setup(void)
-	{
 		INodeChainComponent* transformComp = mNodeChain->createComponent<NodeChainTransformComponent>();
 
 		mTransformPass = mNodeChain->createManualUpdatePass(NodeChain::UPO_PRE_ORDER);
@@ -49,17 +34,6 @@ namespace Claire
 		, mName(name)
 		, mInitialTransform(transform)
 	{
-		mTransformPass = mNodeChain->getManualUpdatePass(0);
-	}
-
-	Node::Node(
-		NodeChainSPtr nodeChain,
-		const Transform& transform
-		)
-		: mNodeChain(nodeChain)
-		, mInitialTransform(transform)
-	{
-		mName = sNameGenerator.generate();
 		mTransformPass = mNodeChain->getManualUpdatePass(0);
 	}
 
@@ -188,7 +162,7 @@ namespace Claire
 		)
 	{
 		return createChild(
-			sNameGenerator.generate(),
+			generateName(),
 			transform
 			);
 	}

@@ -16,7 +16,7 @@ namespace Claire
 	{
 	public:
 		BufferObjectManagerGL(void);
-		~BufferObjectManagerGL(void);
+		~BufferObjectManagerGL(void) = default;
 
 		void* allocateScratch(size_t size);
 		void deallocateScratch(void* ptr);

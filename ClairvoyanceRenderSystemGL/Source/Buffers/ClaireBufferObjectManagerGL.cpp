@@ -11,12 +11,6 @@ namespace Claire
 		: mHeapArea(1024 * 1024 * 8)
 		, mMemoryArena(mHeapArea.getStart(), mHeapArea.getEnd())
 	{
-
-	}
-
-	BufferObjectManagerGL::~BufferObjectManagerGL(void)
-	{
-
 	}
 
 	void* BufferObjectManagerGL::allocateScratch(size_t size)

@@ -31,6 +31,11 @@ namespace Claire
 			);
 	}
 
+	void Scene::destroyCamera(const string& name)
+	{
+		// TODO
+	}
+
 	void Scene::attachCamera(CameraUPtr camera)
 	{
 		string name = camera->getName();

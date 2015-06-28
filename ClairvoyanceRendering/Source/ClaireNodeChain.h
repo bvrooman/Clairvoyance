@@ -70,6 +70,11 @@ namespace Claire
 			return p_;
 		}
 
+		UpdatePass* getUpdatePass(size_t index)
+		{
+			return mUpdatePassList[index].get();
+		}
+
 		UpdatePass* getManualUpdatePass(size_t index)
 		{
 			return mManualUpdatePassList[index].get();

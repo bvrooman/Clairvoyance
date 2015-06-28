@@ -18,7 +18,7 @@ namespace Claire
 	{
 	public:
 		PluginGLWin32(void);
-		~PluginGLWin32(void);
+		~PluginGLWin32(void) = default;
 
 		void install(RenderRoot* renderRoot) CLAIRE_OVERRIDE;
 		void uninstall(RenderRoot* renderRoot) CLAIRE_OVERRIDE;

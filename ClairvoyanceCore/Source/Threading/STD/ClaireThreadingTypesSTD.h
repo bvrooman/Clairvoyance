@@ -3,7 +3,7 @@
 
 #include "ClairePrerequisites.h"
 
-#include "ClaireThreadSpecificPtrSTD.h"
+#include "ClaireThreadLocalPtrSTD.h"
 
 namespace std
 {
@@ -22,7 +22,7 @@ namespace Claire
 	typedef std::recursive_mutex RecursiveMutexImpl;
 	template<class MutexType> using ScopedLockImpl = std::lock_guard<MutexType>;
 	typedef std::thread ThreadImpl;
-	template<class T> using ThreadSpecificPtrImpl = ThreadSpecificPtrSTD<T>;
+	template<class T> using ThreadLocalPtrImpl = ThreadLocalPtrSTD<T>;
 
 	CLAIRE_NAMESPACE_END
 	CLAIRE_NAMESPACE_END

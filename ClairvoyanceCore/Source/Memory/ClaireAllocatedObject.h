@@ -1,7 +1,7 @@
 #ifndef CLAIRE_ALLOCATED_OBJECT_H
 #define CLAIRE_ALLOCATED_OBJECT_H
 
-#include "Threading\ClaireThreadSpecificPtr.h"
+#include "Threading\ClaireThreadLocalPtr.h"
 
 // Undefine new and delete in case of any other #define new or #define delete
 #ifdef new
@@ -74,8 +74,8 @@ namespace Claire
 		}
 
 	private:
-		static ThreadSpecificPtr<HeapArea> sHeapArea;
-		static ThreadSpecificPtr<Arena> sArena;
+		static ThreadLocalPtr<HeapArea> sHeapArea;
+		static ThreadLocalPtr<Arena> sArena;
 
 	private:
 		static size_t getHeapAreaSize(void)
@@ -111,10 +111,10 @@ namespace Claire
 	};
 
 	template<typename Arena, typename HeapArea>
-	ThreadSpecificPtr<HeapArea> AllocatedObject<Arena, HeapArea>::sHeapArea;
+	ThreadLocalPtr<HeapArea> AllocatedObject<Arena, HeapArea>::sHeapArea;
 
 	template<typename Arena, typename HeapArea>
-	ThreadSpecificPtr<Arena> AllocatedObject<Arena, HeapArea>::sArena;
+	ThreadLocalPtr<Arena> AllocatedObject<Arena, HeapArea>::sArena;
 
 	CLAIRE_NAMESPACE_END
 }

@@ -24,7 +24,7 @@ namespace Claire
 	typedef boost::recursive_mutex RecursiveMutexImpl;
 	template<class MutexType> using ScopedLockImpl = boost::interprocess::scoped_lock<MutexType>;
 	typedef boost::thread ThreadImpl;
-	template<class T> using ThreadSpecificPtrImpl = boost::thread_specific_ptr<T>;
+	template<class T> using ThreadLocalPtrImpl = boost::thread_specific_ptr<T>;
 
 	CLAIRE_NAMESPACE_END
 	CLAIRE_NAMESPACE_END

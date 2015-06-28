@@ -28,8 +28,8 @@ namespace Claire
 		MemoryPool* getMemoryPool(const string& name);
 
 	protected:
-		MemoryPoolManager(void);
-		~MemoryPoolManager(void);
+		MemoryPoolManager(void) = default;
+		~MemoryPoolManager(void) = default;
 
 	private:
 		typedef Manager<MemoryPool, string> MemoryPoolManagerImpl;

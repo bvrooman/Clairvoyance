@@ -15,7 +15,7 @@ namespace Claire
 		: public WindowRendererSupportGL
 	{
 	public:
-		WindowRendererSupportGLWin32(void);
+		WindowRendererSupportGLWin32(void) = default;
 		~WindowRendererSupportGLWin32(void);
 
 		void initialize(void) CLAIRE_OVERRIDE;

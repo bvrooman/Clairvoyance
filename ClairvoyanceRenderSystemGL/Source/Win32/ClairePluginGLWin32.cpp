@@ -22,10 +22,6 @@ namespace Claire
 		mWindowRendererSupport->initialize();
 	}
 
-	PluginGLWin32::~PluginGLWin32(void)
-	{
-	}
-
 	void PluginGLWin32::install(RenderRoot* renderRoot)
 	{
 		renderRoot->addRenderSystem(mRenderSystem.get());

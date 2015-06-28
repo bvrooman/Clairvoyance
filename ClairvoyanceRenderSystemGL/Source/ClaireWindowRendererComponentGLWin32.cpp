@@ -9,22 +9,6 @@ namespace Claire
 {
 	CLAIRE_NAMESPACE_BEGIN(rendering)
 
-	WindowRendererComponentGLWin32::WindowRendererComponentGLWin32(RenderWindow* parentRenderWindow)
-		: WindowRendererComponentGL(parentRenderWindow)
-	{
-
-	}
-
-	WindowRendererComponentGLWin32::~WindowRendererComponentGLWin32(void)
-	{
-		destroy();
-	}
-
-	void WindowRendererComponentGLWin32::destroy(void)
-	{
-
-	}
-
 	void WindowRendererComponentGLWin32::createRenderContext(void)
 	{
 		const DeviceContext* deviceContext = mParentRenderWindow->getPlatformComponent()->getDeviceContext();

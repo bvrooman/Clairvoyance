@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <Windows.h>
 
+#include "TestThreadClass.h"
+
 float operator "" _deg(long double v)
 {
 	return v * 2;
@@ -36,7 +38,6 @@ int main()
 
 	std::cout << i << "\n";
 	std::cout << j.j << "\n";
-
 
 	system("PAUSE");
 }
