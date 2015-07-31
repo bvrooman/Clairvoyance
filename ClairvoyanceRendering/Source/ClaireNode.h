@@ -18,9 +18,6 @@ namespace Claire
 	{
 		CLAIRE_MOVABLE_ONLY(Node)
 
-		friend class NodeChain;
-		friend class NodeChainTransformComponent;
-
 	public:
 		typedef std::unique_ptr<Node> NodeUPtr;
 		typedef vector<Node*> NodeVector;
@@ -29,6 +26,9 @@ namespace Claire
 		Node(void) = default;
 		virtual ~Node(void) = default;
 
+		NodeHandle getHandle(void) const { return mHandle; }
+		void setHandle(NodeHandle handle) { mHandle = handle; }
+
 		// Read only get
 		Transform getTransform(void) const;
 		// Read-write get
@@ -36,6 +36,11 @@ namespace Claire
 		// Read only get
 		// The derived transform is not valid until an update is called
 		Transform getDerivedTransform(void) const;
+
+		void setTransformSource(Transform* const transform);
+		void setDerivedTransformSource(Transform* const transform);
+
+		void buildNodeChain(void);
 
 		// Ensure that the derived transform has been updated
 		void forceUpdateDerivedTransform(void) const;
@@ -91,7 +96,6 @@ namespace Claire
 
 		void setParent(Node* parent);
 
-		void buildNodeChain(void);
 		void buildNodeChain_(void);
 
 		void setNodeChain(NodeChainSPtr nodeChain);

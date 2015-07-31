@@ -58,10 +58,10 @@ int CALLBACK WinMain(
 	//root->getMeshManager()->loadResource("Bench", "bench.obj");
 	//root->getMeshManager()->loadResource("Women", "Women.3ds");
 	root->getMeshManager()->loadResource("Box", "box.fbx");
-	//Entity* e = scene->createEntity("HelloWorld", "Box");
+	Entity* e = scene->createEntity("HelloWorld", "Box");
 
 
-	/*RenderCommandBucket<uint32_t> buffer(10);
+	RenderCommandBucket<uint32_t> buffer(10);
 
 	Mesh* m = e->getMesh();
 	typedef vector<SubMesh*> SubMeshList;
@@ -76,7 +76,7 @@ int CALLBACK WinMain(
 		key++;
 	});
 
-	buffer.submit();*/
+	buffer.submit();
 
 	root->startRendering();
 

@@ -51,7 +51,6 @@ namespace Claire
 			GLenum status = wglewInit();
 			if(status != GLEW_OK)
 			{
-				printf("FUCK YOUR MOTHER\n");
 				// Critical error
 			}
 			printOpenGLError();

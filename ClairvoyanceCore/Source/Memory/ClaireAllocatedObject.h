@@ -27,48 +27,48 @@ namespace Claire
 		{
 		}
 
-		void* operator new(size_t sz)
+		static void* operator new(size_t sz)
 		{
 			initializeTLS();
 			size_t alignment = getAlignmentFromSize(sz);
 			return sArena->allocate(sz, alignment, 0);
 		}
 
-		void* operator new(size_t sz, void* ptr)
+		static void* operator new(size_t sz, void* ptr)
 		{
 			(void)sz;
 			return ptr;
 		}
 
-		void* operator new[](size_t sz)
+		static void* operator new[](size_t sz)
 		{
 			initializeTLS();
 			size_t alignment = getAlignmentFromSize(sz);
 			return sArena->allocate(sz, alignment, 0);
 		}
 
-		void* operator new[](size_t sz, void* ptr)
+		static void* operator new[](size_t sz, void* ptr)
 		{
 			(void)sz;
 			return ptr;
 		}
 
-		void operator delete(void* ptr)
+		static void operator delete(void* ptr)
 		{
 			sArena->deallocate(ptr);
 		}
 
-		void operator delete(void* ptr, void*)
+		static void operator delete(void* ptr, void*)
 		{
 			sArena->deallocate(ptr);
 		}
 
-		void operator delete[](void* ptr)
+		static void operator delete[](void* ptr)
 		{
 			sArena->deallocate(ptr);
 		}
 
-		void operator delete[](void* ptr, void*)
+		static void operator delete[](void* ptr, void*)
 		{
 			sArena->deallocate(ptr);
 		}
@@ -88,17 +88,14 @@ namespace Claire
 			if(sHeapArea.get() == nullptr)
 			{
 				size_t sz = getHeapAreaSize();
-				sHeapArea.reset(
-					new HeapArea(sz)
-					);
+				sHeapArea = new HeapArea(sz);
 			}
+
 			if(sArena.get() == nullptr)
 			{
-				sArena.reset(
-					new Arena(
-						sHeapArea->getStart(), 
-						sHeapArea->getEnd()
-						)
+				sArena = new Arena(
+					sHeapArea->getStart(),
+					sHeapArea->getEnd()
 					);
 			}
 		}
@@ -111,10 +108,10 @@ namespace Claire
 	};
 
 	template<typename Arena, typename HeapArea>
-	ThreadLocalPtr<HeapArea> AllocatedObject<Arena, HeapArea>::sHeapArea;
+	ThreadLocalPtr<HeapArea> AllocatedObject<Arena, HeapArea>::sHeapArea = nullptr;
 
 	template<typename Arena, typename HeapArea>
-	ThreadLocalPtr<Arena> AllocatedObject<Arena, HeapArea>::sArena;
+	ThreadLocalPtr<Arena> AllocatedObject<Arena, HeapArea>::sArena = nullptr;
 
 	CLAIRE_NAMESPACE_END
 }

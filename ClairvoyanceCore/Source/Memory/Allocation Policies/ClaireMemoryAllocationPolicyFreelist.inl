@@ -11,8 +11,7 @@ namespace Claire
 		sFreelist = new Freelist(
 			start,
 			end,
-			mMaxAllocationSize,
-			alignment, 0);
+			mMaxAllocationSize);
 
 	}
 

@@ -18,7 +18,7 @@ namespace Claire
 	void NodeChain::addNode(Node* node)
 	{
 		// Assign the node a handle
-		node->mHandle = mCurrentHandle;
+		node->setHandle(mCurrentHandle);
 
 		// Add the node to each component
 		for(auto&& component : mComponentVector)
@@ -81,8 +81,8 @@ namespace Claire
 
 		// Update the nodes in the set [start, end), where
 		//	start = node
-		//	end = last child node of node's branch
-		NodeHandle start = node->mHandle;
+		//	end = last child node of node's branch + 1
+		NodeHandle start = node->getHandle();
 		NodeHandle end = start + 1;
 
 		for(NodeHandle i = start; i < end; i++)

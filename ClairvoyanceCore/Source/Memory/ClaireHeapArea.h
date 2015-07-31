@@ -21,7 +21,7 @@ namespace Claire
 		void* mEnd = nullptr;
 
 		typedef std::unique_ptr<byte[]> ByteArrayUPtr;
-		ByteArrayUPtr mByteArray;
+		ByteArrayUPtr mByteArray = nullptr;
 	};
 
 	typedef std::unique_ptr<HeapArea> HeapAreaUPtr;

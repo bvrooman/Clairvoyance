@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UT_AllocatedObject", "Unit Tests\UT_AllocatedObject\UT_AllocatedObject.vcxproj", "{527CFFCC-ABA1-45D5-8548-689A4DCAE379}"
 EndProject
@@ -42,6 +42,13 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Node", "Performance Tests\Node\Node.vcxproj", "{A75903F1-B7CA-4F4D-9397-FAA94F245720}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UT_Manager", "Unit Tests\UT_Manager\UT_Manager.vcxproj", "{B1D76054-EF20-4D5D-9396-AD2C3F6FA469}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PerformanceTests", "Performance Tests\PerformanceTests\PerformanceTests.vcxproj", "{06F34490-08B6-4BF8-8F08-24C07E6FE4FE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E5240570-5738-42BC-B402-58C66EFD4719} = {E5240570-5738-42BC-B402-58C66EFD4719}
+		{C22F24B4-E2CF-4031-8AC2-8FEAC5A863EB} = {C22F24B4-E2CF-4031-8AC2-8FEAC5A863EB}
+		{B2648FBC-DAB4-45F2-9159-4090A6004699} = {B2648FBC-DAB4-45F2-9159-4090A6004699}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -269,6 +276,18 @@ Global
 		{B1D76054-EF20-4D5D-9396-AD2C3F6FA469}.Release|Win32.ActiveCfg = Release|Win32
 		{B1D76054-EF20-4D5D-9396-AD2C3F6FA469}.Release|Win32.Build.0 = Release|Win32
 		{B1D76054-EF20-4D5D-9396-AD2C3F6FA469}.Release|x64.ActiveCfg = Release|Win32
+		{06F34490-08B6-4BF8-8F08-24C07E6FE4FE}.Debug|ARM.ActiveCfg = Debug|Win32
+		{06F34490-08B6-4BF8-8F08-24C07E6FE4FE}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{06F34490-08B6-4BF8-8F08-24C07E6FE4FE}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{06F34490-08B6-4BF8-8F08-24C07E6FE4FE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{06F34490-08B6-4BF8-8F08-24C07E6FE4FE}.Debug|Win32.Build.0 = Debug|Win32
+		{06F34490-08B6-4BF8-8F08-24C07E6FE4FE}.Debug|x64.ActiveCfg = Debug|Win32
+		{06F34490-08B6-4BF8-8F08-24C07E6FE4FE}.Release|ARM.ActiveCfg = Release|Win32
+		{06F34490-08B6-4BF8-8F08-24C07E6FE4FE}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{06F34490-08B6-4BF8-8F08-24C07E6FE4FE}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{06F34490-08B6-4BF8-8F08-24C07E6FE4FE}.Release|Win32.ActiveCfg = Release|Win32
+		{06F34490-08B6-4BF8-8F08-24C07E6FE4FE}.Release|Win32.Build.0 = Release|Win32
+		{06F34490-08B6-4BF8-8F08-24C07E6FE4FE}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -288,5 +307,6 @@ Global
 		{A6028332-A2D5-49E6-B5BD-7E725DF254A5} = {C4654A19-D224-4550-99AA-4D8C5E129AB9}
 		{A75903F1-B7CA-4F4D-9397-FAA94F245720} = {C4654A19-D224-4550-99AA-4D8C5E129AB9}
 		{B1D76054-EF20-4D5D-9396-AD2C3F6FA469} = {02379F4A-3DA1-4D09-B176-BC2B1B6845B2}
+		{06F34490-08B6-4BF8-8F08-24C07E6FE4FE} = {C4654A19-D224-4550-99AA-4D8C5E129AB9}
 	EndGlobalSection
 EndGlobal

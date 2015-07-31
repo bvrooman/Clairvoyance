@@ -11,7 +11,7 @@ namespace Claire
 	{
 	public:
 		Freelist(void);
-		Freelist(const void* start, const void* end, size_t elementSize, size_t alignment, size_t offset);
+		Freelist(const void* start, const void* end, size_t elementSize);
 
 		void* getBlock(void);
 		void returnBlock(void* ptr);

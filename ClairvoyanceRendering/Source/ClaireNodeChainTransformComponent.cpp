@@ -9,15 +9,15 @@ namespace Claire
 
 	void NodeChainTransformComponent::addNode(Node* node)
 	{
-		NodeHandle handle = node->mHandle;
+		NodeHandle handle = node->getHandle();
 
 		// Save the transform the node is added with
 		const Transform transform = node->getTransform();
 		mLocalTransforms[handle] = transform;
 
 		// Link the local and derived transforms to this node
-		node->mTransform = &mLocalTransforms[handle];
-		node->mDerivedTransform = &mDerivedTransforms[handle];
+		node->setTransformSource(&mLocalTransforms[handle]);
+		node->setDerivedTransformSource(&mDerivedTransforms[handle]);
 	}
 
 	void NodeChainTransformComponent::update(NodeHandle handle, FlatNode node)

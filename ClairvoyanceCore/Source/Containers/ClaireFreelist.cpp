@@ -8,7 +8,7 @@ namespace Claire
 	{
 	}
 
-	Freelist::Freelist(const void* start, const void* end, size_t elementSize, size_t alignment, size_t offset)
+	Freelist::Freelist(const void* start, const void* end, size_t elementSize)
 	{
 		union
 		{

@@ -13,6 +13,8 @@ namespace Claire
 	{
 	private:
 		typedef T* pointer;
+		typedef T& reference;
+
 		static thread_local pointer mPtr;
 
 	public:
@@ -44,13 +46,9 @@ namespace Claire
 			mPtr = ptr;
 		}
 
-		T* operator->(void) { return get(); }
-		T& operator*(void) { return *get(); }
+		pointer operator->(void) const { return get(); }
+		reference operator*(void) const { return *get(); }
 
-		T* operator->(void) const { return get(); }
-		T& operator*(void) const { return *get(); }
-
-		operator T*(void) { return get(); }
 		operator T*(void) const { return get(); }
 	};
 

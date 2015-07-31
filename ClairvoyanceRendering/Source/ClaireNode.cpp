@@ -60,6 +60,16 @@ namespace Claire
 		return *mDerivedTransform;
 	}
 
+	void Node::setTransformSource(Transform* const transform)
+	{
+		mTransform = transform;
+	}
+
+	void Node::setDerivedTransformSource(Transform* const transform)
+	{
+		mDerivedTransform = transform;
+	}
+
 	void Node::forceUpdateDerivedTransform(void) const
 	{
 		NodeHandle start = mNodeChain->getRootNode()->getNodeHandle();
