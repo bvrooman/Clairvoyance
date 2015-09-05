@@ -54,12 +54,14 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\Developer.Debug.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\Developer.Release.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -86,7 +88,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)ClairvoyanceCore\Source;$(SolutionDir)ClairvoyanceMath\Source;$(SolutionDir)ClairvoyanceRendering\Source;$(SolutionDir)ClairvoyanceRenderSystemGL\Source;$(GOOGLE_TEST)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ClairvoyanceCore\Source;$(SolutionDir)ClairvoyanceMath\Source;$(SolutionDir)ClairvoyanceRendering\Source;$(SolutionDir)ClairvoyanceRenderSystemGL\Source</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -112,7 +114,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)ClairvoyanceCore\Source;$(SolutionDir)ClairvoyanceMath\Source;$(SolutionDir)ClairvoyanceRendering\Source;$(SolutionDir)ClairvoyanceRenderSystemGL\Source;$(GOOGLE_TEST)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ClairvoyanceCore\Source;$(SolutionDir)ClairvoyanceMath\Source;$(SolutionDir)ClairvoyanceRendering\Source;$(SolutionDir)ClairvoyanceRenderSystemGL\Source</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -150,11 +152,9 @@
     <ProjectReference Include="..\..\ClairvoyanceRenderSystemGL\ClairvoyanceRenderSystemGL.vcxproj">
       <Project>{f7ce7b17-57ab-4b3a-8801-ddbc7a76a683}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\gtest_main\gtest_main.vcxproj">
-      <Project>{12afabce-b2eb-4a3e-9534-2e0dbee14d72}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\UT_Math\Main.cpp" />
     <ClCompile Include="AxisAlignedBoundingBoxTests.cpp" />
     <ClCompile Include="BufferObjectTests.cpp" />
     <ClCompile Include="GLTests.cpp" />

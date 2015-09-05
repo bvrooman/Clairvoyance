@@ -2,14 +2,18 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup>
+    <IncludePath>$(GOOGLE_TEST)include;$(CELERO)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(GOOGLE_TEST_LIBRARY_DIR)Release;$(CELERO_LIBRARY_DIR)Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <Link>
-      <AdditionalDependencies>celero.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(CELERO_LIBRARY_DIR)Release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gtest.lib;celero.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
     </Link>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(CELERO)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(GOOGLE_TEST)include;$(CELERO)include;</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup />
